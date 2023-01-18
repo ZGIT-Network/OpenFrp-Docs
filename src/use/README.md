@@ -126,7 +126,7 @@ docker logs of
 若您希望使用配置文件运行，映射目录为 `/run`
 
 ```bash
-docker run -d --name of --restart unless-stopped -v /path/to/your/frpc.ini:/run/frpc/ini openfrp/frpc:latest
+docker run -d --name of --restart unless-stopped -v /path/to/your/frpc.ini:/run/frpc.ini openfrp/frpc:latest
 ```
 
 如何更新容器:
