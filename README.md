@@ -1,41 +1,13 @@
+# OpenFrp-Docs
+
+欢迎各位共享自己的一份力量，不仅是方便自己，还是方便他人。
+
 # VuePress
 
-This directory is a brief example of a [VuePress](https://vuepress.vuejs.org/) site that can be deployed to Vercel with zero-configuration.
+Powered by [VuePress](https://vuepress.vuejs.org/) 
 
-## Deploy Your Own
+## Deloy
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/vuepress&template=vuepress)
 
-_Live Example: https://vuepress-starter-template.vercel.app_
-
-## Setup
-
-Install the dependencies:
-
-```bash
-$ yarn install
-```
-
-### Development
-
-Start the development server
-
-```bash
-$ yarn dev
-```
-
-### Build the project
-
-Build for production
-
-```bash
-$ yarn build
-```
-
-### Deploy
-
-Deploy your VuePress application to Vercel
-
-```bash
-$ vercel
-```
+## 在 Vercel 上配置,在 Github 上 推送 Markdown Docs。
