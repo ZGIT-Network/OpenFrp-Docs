@@ -3,7 +3,7 @@ module.exports = {
     description: '方便您的使用',
 
     themeConfig: {
-        sidebar: 'true',
+        sidebar: 'auto',
         nav:[
             { text: '首页', link: '/' },
             { text: '常见问题', link: '/problems/' },
