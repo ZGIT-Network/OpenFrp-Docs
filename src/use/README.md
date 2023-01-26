@@ -142,6 +142,12 @@ docker pull openfrp/frpc:latest
 docker run -d --name of --restart unless-stopped openfrp/frpc:latest -u <访问密钥> -p <隧道ID>[<,隧道ID><,隧道ID>]
 ```
 
+> Docker 本地服务访问提示 <br/>
+> 你可能在访问的时候发现**无法连接到本地服务**。
+> 这时，您需要将本地链接改成您
+> - **服务器的 内网IP**  
+> - 宿主机Docker0接口(一般为172.17.0.1)
+
 <!-- Docker THE END -->
 
 ### Mac OS
