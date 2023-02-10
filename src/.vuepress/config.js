@@ -29,10 +29,13 @@ module.exports = {
             ],
             '/problems/':'auto'
         },
-        repo: "ZGIT-Network/OpenFrp-Docs/",
-        repoLabel: "编辑该文档",
+
+        docsRepo: 'ZGIT-Network/OpenFrp-Docs',
+        docsDir: 'src',
+        docsBranch: 'main',
         editLinks:true,
         editLinkText: '帮我们编辑该页面!',
+        
         nav:[
             { text: '首页', link: '/' },
             { text: '常见问题', link: '/problems/' },
