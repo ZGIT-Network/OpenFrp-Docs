@@ -29,29 +29,10 @@ module.exports = {
             ],
             '/problems/':'auto'
         },
-
-
-        // [
-        //     {
-        //         title: 'Group 1',
-        //         path: '/use/',
-        //         sidebarDepth: 1,
-        //         children:[
-        //             ['','基本教程'],
-        //             ['desktop-launcher','桌面启动器'] 
-        //         ]
-        //     },
-        //     {
-        //         title: 'Group2',
-        //         path: '/problems/',
-        //         displayAllHeaders: true
-        //     }
-        // ],
-        // '/use/':[
-        //     ['','基本教程'],
-        //     ['desktop-launcher','桌面启动器']
-        // ],
-        // '/problems/': 'auto'
+        repo: "ZGIT-Network/OpenFrp-Docs/",
+        repoLabel: "编辑该文档",
+        editLinks:true,
+        editLinkText: '帮我们编辑该页面!',
         nav:[
             { text: '首页', link: '/' },
             { text: '常见问题', link: '/problems/' },
