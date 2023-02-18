@@ -38,8 +38,7 @@ connection-timeout = 5000
 # 启用对 HAProxy 的兼容 (默认为Proxy-Protocol-V2)
 proxy-protocol = true
 ```
-保存后，<br>
-若在Velocity运行中修改的，输入指令`velocity reload`
+保存后，若在Velocity正在运行，请输入指令`velocity reload`以应用修改
 
 ### Paper 端 (仅新版本支持)
 
@@ -48,6 +47,7 @@ proxy-protocol = true
 proxies:
   proxy-protocol: true
 ```
+保存后，若Paper端正在运行，请输入指令`paper reload`以应用修改
 
 ### Frpc 端
 
