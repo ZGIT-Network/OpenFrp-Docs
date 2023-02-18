@@ -38,7 +38,7 @@ haproxy-protocol = true
 </code><pre></td>
     </tr>
     <tr>
-    <td>重载指令<br>(在服务端输入<br>不要带斜杠)</td>
+    <td>重载指令<br>(在控制台输入<br>不要带斜杠)</td>
     <td>/velocity reload</td>
     <td>/greload</td>
     <td>/paper reload</td>
