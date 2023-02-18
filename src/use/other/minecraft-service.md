@@ -1,5 +1,7 @@
 # Minecraft 相关网络帮助
 
+(个人建议本页面请前往[这里](https://github.com/ZGIT-Network/OpenFrp-Docs/blob/main/src/use/other/minecraft-service.md)查看)
+
 本章不是从 0 开始帮你搭建的,您需要一定的基础(知道这是什么)。<br>
 我们非常建议您如果要使用
 可以在以下地方下到 BungeeCord 类端:
