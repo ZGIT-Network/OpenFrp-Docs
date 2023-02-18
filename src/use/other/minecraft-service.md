@@ -14,63 +14,60 @@ FRP 本质上只有转发流量的功能,并没有标明`我是从哪来? `<br>
 这可以让服务器反馈真实的 IP ,避免某些IP级操作导致问题出现 <br>
 (如 ban-ip 牵连全服玩家，因为入网IP都是 127.0.0.1)
 
-### BungeeCord 类端
-
-可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能连接到服务器游玩<br>
-打开 `config.yaml` 文件:
-```yaml
-listeners:
+---
+### 代理端方面设置一览
+  <table>
+    <tr> <td>服务端类型</td> <th>Velocity</th> <th>BungeeCord</th> <th>Paper (游戏版本>=1.19 且单端模式)</th> </tr>
+    <tr> <td>文件名称/路径</td> <td>velocity.yaml</td> <td>config.yaml</td> <td>config/paper-global.yml</td>
+  <tr> <td>要修改的内容<br>(不要直接复制，<br>看修改的参数)</td>
+<td><pre><code class="language-toml">[advanced]
+connection-timeout = 5000
+# ...
+# 启用对 HAProxy 的兼容
+#(默认为Proxy-Protocol-V2)
+haproxy-protocol = true
+</code><pre></td>
+<td><pre><code class="language-yaml">listeners:
 - query_port: 25577
   # 非完整 Config 请勿复制粘贴
   # 将此项值改为 `true`
   proxy_protocol: true
-```
-
-### Velocity 端
-
-本质上有 BungeeCord 的样子,但配置文件完全不同。<br>
-可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能连接到服务器游玩<br>
-打开 `velocity.toml` 文件，修改并保存:
-```toml
-[advanced]
-connection-timeout = 5000
-# ...
-# 启用对 HAProxy 的兼容 (默认为Proxy-Protocol-V2)
-proxy-protocol = true
-```
-保存后，若在Velocity正在运行，请输入指令`velocity reload`以应用修改
-
-### Paper 端 (仅新版本支持)
-
-打开`config/paper-global.yml`,修改并保存:
-```yaml
-proxies:
+</code><pre></td>
+<td><pre><code class="language-yaml">proxies:
   proxy-protocol: true
-```
-保存后，若Paper端正在运行，请输入指令`paper reload`以应用修改
+</code><pre></td>
+    </tr>
+    <tr>
+    <td>重载指令<br>(在服务端输入<br>不要带斜杠)</td>
+    <td>/velocity reload</td>
+    <td>/greload</td>
+    <td>/paper reload</td>
+    </tr>
+  </table>
 
+可选项(`Velocity`/`BungeeCord`): 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能连接到服务器游玩<br>
+
+---
 ### Frpc 端
 
 别急，代理那边改完之后还没结束，Frpc那边也需要修改<br>
 ~除非Frpc之后会自动加载HaProxy协议，否则这个地方依旧有用~
 
-- 加载方式为配置文件的，插入如下内容并保存
-```ini
-[<您的隧道名称>]
+<table>
+    <tr> <td>Frpc运行方式</td> <th>配置文件</th> <th>网页修改</th> </tr>
+    <tr> <td>修改内容</td>
+<td><pre><code class="language-ini">
+[您的隧道名称]
 # ...(这里代表其他配置项目)
 # 上面那行隧道名称是提醒你底下这行要插入哪里，看位置和顺序
 proxy_protocol_version = v2
-```
+</code><pre></td>
+<td><pre><code>proxy_protocol_version = v2
+</code><pre></td>
+    </tr>
+  </table>
 
-- 加载方式为指令的
-
-在网站的管理隧道内选择您的Minecraft穿透隧道旁边的编辑<br>
-在更多配置内插入以下内容，并保存
-```
-proxy_protocol_version = v2
-```
-
-注意:`不管以什么方式保存，都得需要重新打开Frpc才能生效`
+注意:`记得保存并重新打开Frpc才能生效`
 
 ## Geyser JE+BE?
 
