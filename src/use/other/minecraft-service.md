@@ -106,7 +106,7 @@ proxy_protocol_version = v2
   
   修改配置`server.properties`文件,并找到如下配置项,且修改成像我这样的参数,修改完毕后保存
   ```properties
-  online-mode=false
+  online-mode=true
   ```
   按如下方式启动:
   ```bash
