@@ -65,12 +65,12 @@ proxy-protocol = true
 
 当然可以！你可以根据您的服务端来查看我们推荐的方案
 
-<detail><summary>单端服务端</summary>
+<detail><mark><summary>单端服务端</summary></mark>
   
   ~以下内容以Spigot服务端做举例~
   
   Spigot的需要安装`Geyser`与`Floodgate`到`plugins文件夹`内<br>
-  且需要下载`Authlib-injector`,放入与`spigot.jar``同文件夹`<br>
+  且需要下载`Authlib-injector`,放入与`spigot.jar`同文件夹下<br>
   并且你在使用`LittleSkin`提供的外置验证服务
   
   修改配置`server.properties`文件,并找到如下配置项,且修改成像我这样的参数,修改完毕后保存
@@ -95,7 +95,7 @@ proxy-protocol = true
   online-mode = true
   ```
   
-  这样就可以启动了，具体启动`Velocity`/`BungeeCord`
+  这样就可以启动了，具体启动`Velocity`/`BungeeCord`的方法，在此就不再赘述<br>
   然后具体如何定义外置验证的地址,请查看[这篇教程](https://github.com/CaaMoe/MultiLogin/wiki/Home/985360ab3ae75312e019001f5dccc515d57b5a0d)
 </detail>
 
