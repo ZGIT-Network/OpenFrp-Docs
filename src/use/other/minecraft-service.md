@@ -16,7 +16,7 @@ FRP 本质上只有转发流量的功能,并没有标明`我是从哪来? `<br>
 
 ### BungeeCord 类端
 
-可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能游玩<br>
+可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能连接到服务器游玩<br>
 打开 `config.yaml` 文件:
 ```yaml
 listeners:
@@ -29,7 +29,7 @@ listeners:
 ### Velocity 端
 
 本质上有 BungeeCord 的样子,但配置文件完全不同。<br>
-可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能游玩<br>
+可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能连接到服务器游玩<br>
 打开 `velocity.toml` 文件，修改并保存:
 ```toml
 [advanced]
