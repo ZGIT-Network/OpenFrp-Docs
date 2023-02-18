@@ -152,7 +152,7 @@ proxy_protocol_version = v2
   
   Paper的需要下载`Geyser`与`Floodgate` 并安装到`plugins文件夹`内<br>
   (请根据您的服务端类型下载插件)
-  且需要下载`Authlib-injector`,放入与`spigot.jar`同文件夹下<br>
+  且需要下载`Authlib-injector`,放入与`paper.jar`同文件夹下<br>
   并且你在使用`LittleSkin`提供的外置验证服务
   
   修改配置`server.properties`文件,找到并修改成如下,然后保存
