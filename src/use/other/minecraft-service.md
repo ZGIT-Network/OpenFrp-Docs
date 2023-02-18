@@ -161,7 +161,7 @@ proxy_protocol_version = v2
   ```  
   按如下方式启动(指令为模板，请按顺序放置参数):
   ```bash
-  java -javaagent:authlib-injector.jar=https://littleskin.cn/api/yggdrasil -jar spigot.jar
+  java -javaagent:authlib-injector.jar=https://littleskin.cn/api/yggdrasil -jar paper.jar
   ```
   在基岩版登录时，使用微软登录(随时都可能暴毙)即可。
   
