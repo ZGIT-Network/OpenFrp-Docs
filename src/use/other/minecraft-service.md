@@ -99,17 +99,25 @@ proxy_protocol_version = v2
   ```toml
   online-mode = true
   ```
+  这样就可以启动了，具体启动`Velocity`/`BungeeCord`的方法，在此就不再赘述
   
-  这样就可以启动了，具体启动`Velocity`/`BungeeCord`的方法，在此就不再赘述<br>
-  然后具体如何定义外置验证的地址,请查看[这篇教程](https://github.com/CaaMoe/MultiLogin/wiki/Home/985360ab3ae75312e019001f5dccc515d57b5a0d)
+  ---
   
+  - 设置验证服务器的方式  
+  在`plugins/multilogin/services`创建文件名为`yggdrasil.yml`<br>
+  以下将以`LittleSkin`做举例<br>
+  复制里面的[内容](https://pastebin.com/X1LbbNRk),并粘贴到文件内,保存后输入如下指令<br>
+  `multilogin reload`
+  
+  ---
+  
+  - 修改后端以同步UUID  
   后端的所有服务端，都需要修改配置文件`server.properties`，并重启所有的服务端
   ```properties
   online-mode=false
   ```
-  若Velocity的`player-info-forwarding-mode`设置为 `legacy`, 可视作为BungeeCord服务端
   
-  若后端包含`Paper`，建议额外修改并保存
+  若后端包含`Paper`，建议额外修改并保存 （若Velocity的`player-info-forwarding-mode`设置为 `legacy`, 可视作为BungeeCord服务端）
     <table>
     <tr> <td  colspan="2">旧版配置 paper.yml</td> </tr>
     <tr> <th>Velocity</th> <th>BungeeCord</th> </tr>
