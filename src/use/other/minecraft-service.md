@@ -41,6 +41,14 @@ proxy-protocol = true
 保存后，<br>
 若在Velocity运行中修改的，输入指令`velocity reload`
 
+### Paper 端 (仅新版本支持)
+
+打开`config/paper-global.yml`,修改并保存:
+```
+proxies:
+  proxy-protocol: true
+```
+
 ### Frpc 端
 
 别急，代理那边改完之后还没结束，Frpc那边也需要修改<br>
@@ -87,28 +95,71 @@ proxy_protocol_version = v2
   在`Velocity`/`BungeeCord`上安装`Geyser`、`Floodgate`与[MultiLogin](https://github.com/CaaMoe/MultiLogin/releases)到plugins文件夹下<br>
   注意：`根据您的代理端类型下载插件，不要搞错了然后来怪我哦`
   
-  修改配置`velocity.toml`文件,并找到如下配置项,且修改成像我这样的参数,修改完毕后保存
+  打开`velocity.toml`文件,修改并保存:
   ```toml
   online-mode = true
   ```
   
   这样就可以启动了，具体启动`Velocity`/`BungeeCord`的方法，在此就不再赘述<br>
   然后具体如何定义外置验证的地址,请查看[这篇教程](https://github.com/CaaMoe/MultiLogin/wiki/Home/985360ab3ae75312e019001f5dccc515d57b5a0d)
+  
+  后端的所有服务端，都需要修改配置文件`server.properties`，并重启所有的服务端
+  ```properties
+  online-mode=false
+  ```
+  若Velocity的`player-info-forwarding-mode`设置为 `legacy`, 可视作为BungeeCord服务端
+  
+  若后端包含`Paper`，建议额外修改并保存
+    <table>
+    <tr> <td  colspan="2">旧版配置 paper.yml</td> </tr>
+    <tr> <th>Velocity</th> <th>BungeeCord</th> </tr>
+    <tr>
+<td><pre><code class="language-yaml">settings:
+  velocity-support:
+    enabled: true
+    online-mode: true
+    secret: <你自己Velocity服务端的>
+</code><pre></td>
+<td><pre><code class="language-yaml">settings: 
+  bungee-online-mode: true
+</code><pre></td>
+    </tr>
+  </table><br>
+  
+  
+  <table>
+    <tr> <td  colspan="2">新版配置: config/paper-global.yml </td> </tr>
+    <tr> <th>Velocity</th> <th>BungeeCord</th> </tr>
+    <tr>
+<td><pre><code class="language-yaml">proxies:
+  velocity:
+    enabled: true
+    online-mode: true
+    secret: <你自己Velocity服务端的>
+</code><pre></td>
+<td><pre><code class="language-yaml">proxies:
+  bungee-cord:
+    online-mode: true
+</code><pre></td>
+    </tr>
+  </table>
+  
 </detail>
 
-<detail><mark><summary>单端 (不推荐，因为不能使用显示IP)</summary></mark>
+<detail><mark><summary>单端 (不推荐，因为不能使用显示IP，Paper端除外)</summary></mark>
   
-  ~以下内容以Spigot服务端做举例~
+  ~以下内容以Paper服务端做举例~
   
-  Spigot的需要下载`Geyser`与`Floodgate` (根据您的服务端类型下载插件) 并安装到`plugins文件夹`内<br>
+  Paper的需要下载`Geyser`与`Floodgate` 并安装到`plugins文件夹`内<br>
+  (请根据您的服务端类型下载插件)
   且需要下载`Authlib-injector`,放入与`spigot.jar`同文件夹下<br>
   并且你在使用`LittleSkin`提供的外置验证服务
   
-  修改配置`server.properties`文件,并找到如下配置项,且修改成像我这样的参数,修改完毕后保存
+  修改配置`server.properties`文件,找到并修改成如下,然后保存
   ```properties
   online-mode=true
-  ```
-  按如下方式启动:
+  ```  
+  按如下方式启动(指令为模板，请按顺序放置参数):
   ```bash
   java -javaagent:authlib-injector.jar=https://littleskin.cn/api/yggdrasil -jar spigot.jar
   ```
