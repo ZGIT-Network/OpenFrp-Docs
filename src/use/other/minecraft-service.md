@@ -50,8 +50,7 @@ proxy-protocol = true
 
 他可以实现 Java Edtion 与 Bedrock Edtion 共同联机。
 
-目前，可用的方法有 [插件 / 服务端]
-[下载地址]https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/
+目前，支持的加载方式如下 [下载地址](https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/)
 - 单独代理端
 - Spigot 插件
 - BungeeCord 插件
