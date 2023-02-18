@@ -27,7 +27,6 @@ listeners:
   # 非完整 Config 请勿复制粘贴
   # 将此项值改为 `true`
   proxy_protocol: true
-
 ```
 
 ### Velocity 端
@@ -41,8 +40,28 @@ connection-timeout = 5000
 # ...
 # 启用对 HAProxy 的兼容 (默认为Proxy-Protocol-V2)
 proxy-protocol = true
-
 ```
+### Frpc 端
+
+别急，代理那边改完之后还没结束，Frpc那边也需要修改
+
+加载方式为配置文件的，插入如下内容并保存
+```ini
+[<您的隧道名称>]
+# ...(这里代表其他配置项目)
+# 上面那行隧道名称是提醒你底下这行要插入哪里，看位置和顺序
+proxy_protocol_version = v2
+```
+
+加载方式为指令的
+
+在网站的管理隧道内选择您的Minecraft穿透隧道旁边的编辑<br>
+在更多配置内插入以下内容，并保存
+```
+proxy_protocol_version = v2
+```
+
+不管以什么方式保存，都得重新打开Frpc以生效
 
 ## Geyser JE+BE?
 
