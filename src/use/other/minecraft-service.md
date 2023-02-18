@@ -44,7 +44,7 @@ proxy-protocol = true
 ### Paper 端 (仅新版本支持)
 
 打开`config/paper-global.yml`,修改并保存:
-```
+```yaml
 proxies:
   proxy-protocol: true
 ```
