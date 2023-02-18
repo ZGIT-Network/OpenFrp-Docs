@@ -121,7 +121,7 @@ proxy_protocol_version = v2
     secret: <你自己Velocity服务端的>
 </code><pre></td>
 <td><pre><code class="language-yaml">settings: 
-  bungee-online-mode: true
+    bungee-online-mode: true
 </code><pre></td>
     </tr>
   </table><br>
