@@ -46,7 +46,7 @@ proxy-protocol = true
 别急，代理那边改完之后还没结束，Frpc那边也需要修改<br>
 ~除非Frpc之后会自动加载HaProxy协议，否则这个地方依旧有用~
 
-加载方式为配置文件的，插入如下内容并保存
+- 加载方式为配置文件的，插入如下内容并保存
 ```ini
 [<您的隧道名称>]
 # ...(这里代表其他配置项目)
@@ -54,7 +54,7 @@ proxy-protocol = true
 proxy_protocol_version = v2
 ```
 
-加载方式为指令的
+- 加载方式为指令的
 
 在网站的管理隧道内选择您的Minecraft穿透隧道旁边的编辑<br>
 在更多配置内插入以下内容，并保存
@@ -62,7 +62,7 @@ proxy_protocol_version = v2
 proxy_protocol_version = v2
 ```
 
-不管以什么方式保存，都得重新打开Frpc以生效
+注意:`不管以什么方式保存，都得需要重新打开Frpc才能生效`
 
 ## Geyser JE+BE?
 
