@@ -30,7 +30,7 @@ listeners:
 
 本质上有 BungeeCord 的样子,但配置文件完全不同。<br>
 可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能游玩<br>
-打开 `velocity.toml` 文件:
+打开 `velocity.toml` 文件，修改并保存:
 ```toml
 [advanced]
 connection-timeout = 5000
@@ -38,6 +38,9 @@ connection-timeout = 5000
 # 启用对 HAProxy 的兼容 (默认为Proxy-Protocol-V2)
 proxy-protocol = true
 ```
+保存后，<br>
+若在Velocity运行中修改的，输入指令`velocity reload`
+
 ### Frpc 端
 
 别急，代理那边改完之后还没结束，Frpc那边也需要修改<br>
