@@ -55,14 +55,20 @@ haproxy-protocol = true
 
 <table>
     <tr> <td>Frpc运行方式</td> <th>配置文件</th> <th>网页修改</th> </tr>
-    <tr> <td>修改内容</td>
+    <tr> <td>修改方法与内容</td>
 <td><pre><code class="language-ini">
 [您的隧道名称]
 # ...(这里代表其他配置项目)
-# 上面那行隧道名称是提醒你底下这行要插入哪里，看位置和顺序
+# 上面那行隧道名称是提醒你底下这行要插入哪里
+# 看位置和顺序
 proxy_protocol_version = v2
 </code><pre></td>
-<td><pre><code>proxy_protocol_version = v2
+<td><pre><code>在网站的管理隧道内
+Minecraft穿透隧道这一行
+点击旁边的编辑
+在更多配置内插入以下内容，并保存
+·
+proxy_protocol_version = v2
 </code><pre></td>
     </tr>
   </table>
@@ -87,7 +93,7 @@ proxy_protocol_version = v2
 
 当然可以！你可以根据您的服务端来查看我们推荐的方案
 
-<detail><summary>BungeeCord与Velocity</summary>
+#### BungeeCord与Velocity
   
   在`Velocity`/`BungeeCord`上安装`Geyser`、`Floodgate`与[MultiLogin](https://github.com/CaaMoe/MultiLogin/releases)到plugins文件夹下<br>
   注意：`根据您的代理端类型下载插件，不要搞错了然后来怪我哦`
@@ -99,7 +105,6 @@ proxy_protocol_version = v2
   这样就可以启动了，具体启动`Velocity`/`BungeeCord`的方法，在此就不再赘述
   
   ---
-  
   - 设置验证服务器的方式  
   在`plugins/multilogin/services`创建文件名为`yggdrasil.yml`<br>
   以下将以`LittleSkin`做举例<br>
@@ -107,7 +112,6 @@ proxy_protocol_version = v2
   `multilogin reload`
   
   ---
-  
   - 修改后端以同步UUID  
   后端的所有服务端，都需要修改配置文件`server.properties`，并重启所有的服务端
   ```properties
@@ -149,11 +153,9 @@ proxy_protocol_version = v2
     </tr>
   </table>
   
-</detail>
-
-<detail><mark><summary>单端 (不推荐，因为不能使用显示IP，Paper端除外)</summary></mark>
-  
-  ~以下内容以Paper服务端做举例~
+---
+#### 单端 
+(不推荐，因为不能使用显示IP，Paper端除外)  ~以下内容以Paper服务端做举例~
   
   Paper的需要下载`Geyser`与`Floodgate` 并安装到`plugins文件夹`内<br>
   (请根据您的服务端类型下载插件)
@@ -169,10 +171,9 @@ proxy_protocol_version = v2
   java -javaagent:authlib-injector.jar=https://littleskin.cn/api/yggdrasil -jar paper.jar
   ```
   在基岩版登录时，使用微软登录(随时都可能暴毙)即可。
-  
-</detail>
 
-<detail><summary>关于 AuthLib-Injector 更多信息</summary>
-  
+---
+#### 关于 AuthLib-Injector 更多信息
+
 [详细教程](https://github.com/yushijinhun/authlib-injector/wiki/%E5%9C%A8-Minecraft-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8-authlib-injector)
-</detail>
+
