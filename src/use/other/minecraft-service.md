@@ -16,7 +16,7 @@ FRP 本质上只有转发流量的功能,并没有标明`我是从哪来? `<br>
 
 ### BungeeCord 类端
 
-可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能游玩
+可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能游玩<br>
 打开 `config.yaml` 文件:
 ```yaml
 listeners:
@@ -28,8 +28,8 @@ listeners:
 
 ### Velocity 端
 
-本质上有 BungeeCord 的样子,但配置文件完全不同。
-可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能游玩
+本质上有 BungeeCord 的样子,但配置文件完全不同。<br>
+可选项: 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能游玩<br>
 打开 `velocity.toml` 文件:
 ```toml
 [advanced]
@@ -63,10 +63,8 @@ proxy_protocol_version = v2
 
 ## Geyser JE+BE?
 
-[Geyser](https://geysermc.org/) 是近几年来新型代理工具,但他可不就这么简单。
-
-他可以实现 Java Edtion 与 Bedrock Edtion 共同联机。
-
+[Geyser](https://geysermc.org/) 是近几年来新型代理工具,但他可不就这么简单。<br>
+他可以实现 Java Edtion 与 Bedrock Edtion 共同联机。<br>
 目前，支持的加载方式如下 [下载地址](https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/)
 - 单独代理端
 - Spigot 插件
@@ -75,7 +73,7 @@ proxy_protocol_version = v2
 - Fabric Mod
 - Sponge 插件
 
-并且，我在此建议，该程序/插件，应与[Floodgate](https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/)一起并以相同的方式使用
+个人建议：`Geyser`应与[Floodgate](https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/)一起并以相同的方式使用
 
 ### 我可以与外置一起用吗？
 
