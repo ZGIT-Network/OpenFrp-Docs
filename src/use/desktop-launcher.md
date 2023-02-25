@@ -24,4 +24,6 @@
 ![](./image/readme/antin.png)
 ![](./image/readme/antim.png)
 
+> 上图的路径找不到？点一下上面编辑框空白区域，输入 %programdata%/OpenFrp.Launcher/ 然后回车就能跳转过去了.
+
 如果您是懒人用户,请直接安装其他杀软屏蔽系统自带杀软即可(如火绒)。
