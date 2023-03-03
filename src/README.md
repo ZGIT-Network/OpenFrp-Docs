@@ -35,6 +35,7 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 
 - [[支持非正版,官方教程] 一分半教你进行Minecraft联机！| OpenFrp使用指南](https://www.bilibili.com/video/BV1224y1X7sU)
 - [[OF内网穿透] 超简单Minecraft我的世界联机教程-离线模式也可以联机啦！](https://www.bilibili.com/video/BV1SD4y1H758)
+- [[快速开服指南]通过MCSM与OPENFRP一键快速开启Minecraft服务器！| OpenFrp使用指南](https://www.bilibili.com/video/BV1yD4y1u7Kq/)
 - (欢迎上榜)
 
 
