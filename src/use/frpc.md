@@ -155,9 +155,9 @@ docker run -d --name of --restart unless-stopped openfrp/frpc:latest -u <访问�
 
 你需要下载 FRPC (Darwin)。
 
-Mac分为 Apple 芯片 和 Inter 芯片 （最常见）
+Mac分为 Apple 芯片 和 Intel 芯片 （最常见）
 架构也有所不同：
-| Apple CPU | Inter CPU |
+| Apple CPU | Intel CPU |
 | --- | --- |
 | arm64 | amd64 |
 
