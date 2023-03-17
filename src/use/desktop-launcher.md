@@ -6,7 +6,7 @@
 
 ## 系统服务模式
 
-在多次修改后,启动器已分为 Launcher 和 Core 的形式,而 Core 是主核心，Launcher 只是一个管理它的工具。当 Launcher 崩溃后，您已运行的隧道不会直接`暴毙`，~~毕竟我们家的软件 BUG 很多呢。~~
+在多次修改后,启动器已分为 Launcher 和 Core 的形式,而 Core 是主核心，Launcher 只是一个管理它的工具。
 
 那么以下就是这两种模式的区别:
 
@@ -22,8 +22,7 @@
 ![](./image/readme/antiv.png)
 ![](./image/readme/antib.png)
 ![](./image/readme/antin.png)
-![](./image/readme/antim.png)
+![](./image/readme/anti3.png)
 
-> 上图的路径找不到？点一下上面编辑框空白区域，输入 %programdata%/OpenFrp.Launcher/ 然后回车就能跳转过去了.
 
 如果您是懒人用户,请直接安装其他杀软屏蔽系统自带杀软即可(如火绒)。
