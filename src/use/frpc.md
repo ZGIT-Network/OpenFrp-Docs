@@ -12,12 +12,8 @@
 >```ini
 >auto_tls = false # 是否启用自动TLS
 >auto_tls_mode = auto #工作模式
->	# 
->	# 
->	# 
->	# 
 >```
->
+
 
 TCP 附加说明:
 * 有关 `auto_tls`
