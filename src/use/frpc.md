@@ -9,10 +9,10 @@
 
 ### TCP隧道
 
->```ini
->auto_tls = false # 是否启用自动TLS
->auto_tls_mode = auto #工作模式
->```
+```ini
+auto_tls = false # 是否启用自动TLS
+auto_tls_mode = auto #工作模式
+```
 
 
 TCP 附加说明:
@@ -34,10 +34,10 @@ TCP 附加说明:
 
 ### HTTPS隧道
 
->```ini
->auto_tls = false	# 同上
->auto_tls_mode = auto	# 同上
->force_https = true
+```ini
+auto_tls = false	# 同上
+auto_tls_mode = auto	# 同上
+force_https = true
 
 
 HTTPS 附加说明:
