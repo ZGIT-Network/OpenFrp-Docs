@@ -12,7 +12,7 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 
 # 特性
 
-基本服务不需收费，也就是您可以在我们的服务条款及内容策略下自由的使用 Openfrp 所提供的端口映射服务
+基本服务不需收费，也就是您可以在我们的[服务条款](https://www.openfrp.net/policy/)及[内容策略](https://www.openfrp.net/content/)下自由的使用 Openfrp 所提供的端口映射服务
 
 # 快速入门
 [使用方法](use)
@@ -40,4 +40,5 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 - [[有求必应]Java版联机教程（可用于手机与电脑Java版互通）](https://www.bilibili.com/video/BV1So4y1t7q9)
 - (欢迎上榜)
 
+*最后一次更新于 2023/5/1 22:03*
 
