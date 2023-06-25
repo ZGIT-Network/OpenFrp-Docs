@@ -5,7 +5,7 @@ tagline:
 
 <!-- 由 云默安 在 2023/5/1 修改。 -->
 
-<!-- 由 狐狸汉克 在 2023/6/9 修改。 -->
+<!-- 由 狐狸汉克 在 2023/6/25 修改。 -->
 
 
 # 概述
@@ -14,14 +14,18 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 
 # 特性
 
-基本服务不需收费，也就是您可以在我们的[服务条款](https://www.openfrp.net/policy/)及[内容策略](https://www.openfrp.net/content/)下自由的使用 Openfrp 所提供的端口映射服务
+基本服务不需收费，也就是您可以在我们的[服务条款](https://www.openfrp.net/policy/)及[内容策略](https://www.openfrp.net/content/)下自由的使用 Openfrp 所提供的端口映射服务。
 
 # 快速入门
 [使用方法](use)
 <br>
 [常见错误](problems)
 <br>
-[安装指南](guides)
+[配置指南](guides)
+<br>
+
+
+
 
 
 # 捐赠
@@ -31,15 +35,21 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 如果您赞助了我们，请一定要备注您的QQ或者其他联系方式！我们将感激不尽！
 
 
-# 官方交流群
+# 官方用户交流群/反馈群
+QQ群较为活跃，建议加入QQ群
+
+### QQ群
 - [OpenFrp 用户交流群 ①](https://jq.qq.com/?_wv=1027&k=Rmq2B1uQ) (注: 问题回答错误将无法加入群聊，你可以更换到别的群。)
 - [OpenFrp 用户交流群 ②](https://jq.qq.com/?_wv=1027&k=ju2Ki3Fn)
 - [OpenFrp 用户交流群 ③](https://jq.qq.com/?_wv=1027&k=CnQINlkJ)
+- 三群适合各位小白进入。
+### 微信群
+![企业微信二维码 ](https://d.of.gs/images/WxCodeMin.png)
 
-三群适合各位小白进入。
+### 钉钉群
+- [点击加入](https://qr.dingtalk.com/action/joingroup?code=v1,k1,qHCW+rhCFYsFlDYj84QH3dMCVHMaDno5qMaY9MzAS5Y=&_dt_no_comment=1&origin=11)
 
-
-推荐配合视频使用:
+推荐视频:
 
 - [[支持非正版,官方教程] 一分半教你进行Minecraft联机！| OpenFrp使用指南](https://www.bilibili.com/video/BV1224y1X7sU)
 - [[快速开服指南]通过MCSM与OPENFRP一键快速开启Minecraft服务器！| OpenFrp使用指南](https://www.bilibili.com/video/BV1yD4y1u7Kq/)
@@ -48,5 +58,5 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 - [[有求必应]Java版联机教程（可用于手机与电脑Java版互通）](https://www.bilibili.com/video/BV1So4y1t7q9)
 - (欢迎上榜)
 
-*最后一次更新于 2023/5/1 22:03*
+*最后一次更新于 2023/6/25*
 
