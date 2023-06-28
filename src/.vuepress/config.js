@@ -27,7 +27,8 @@ module.exports = {
                 }
 
             ],
-            '/problems/':'auto'
+            '/problems/':'auto',
+            'guides':'auto'
         },
 
         docsRepo: 'ZGIT-Network/OpenFrp-Docs',
