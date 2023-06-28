@@ -19,7 +19,7 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 # 快速入门
 [使用方法](use)
 <br>
-[常见错误](problems)
+[常见问题](problems)
 <br>
 [配置指南](guides)
 <br>
@@ -35,21 +35,23 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 如果您赞助了我们，请一定要备注您的QQ或者其他联系方式！我们将感激不尽！
 
 
-# 官方用户交流群/反馈群
+# 官方用户交流/反馈群
 QQ群较为活跃，建议加入QQ群
 
 ### QQ群
 - [OpenFrp 用户交流群 ①](https://jq.qq.com/?_wv=1027&k=Rmq2B1uQ) (注: 问题回答错误将无法加入群聊，你可以更换到别的群。)
 - [OpenFrp 用户交流群 ②](https://jq.qq.com/?_wv=1027&k=ju2Ki3Fn)
 - [OpenFrp 用户交流群 ③](https://jq.qq.com/?_wv=1027&k=CnQINlkJ)
-- 三群适合各位小白进入。
+- 一群较为专业，三群适合各位小白进入。
 ### 微信群
 ![企业微信二维码 ](https://d.of.gs/images/WxCodeMin.png)
 
 ### 钉钉群
 - [点击加入](https://qr.dingtalk.com/action/joingroup?code=v1,k1,qHCW+rhCFYsFlDYj84QH3dMCVHMaDno5qMaY9MzAS5Y=&_dt_no_comment=1&origin=11)
 
-推荐视频:
+
+
+# 推荐视频
 
 - [[支持非正版,官方教程] 一分半教你进行Minecraft联机！| OpenFrp使用指南](https://www.bilibili.com/video/BV1224y1X7sU)
 - [[快速开服指南]通过MCSM与OPENFRP一键快速开启Minecraft服务器！| OpenFrp使用指南](https://www.bilibili.com/video/BV1yD4y1u7Kq/)
@@ -57,6 +59,10 @@ QQ群较为活跃，建议加入QQ群
 - [2分钟！学会用自己电脑开服](https://www.bilibili.com/video/BV1Ek4y1E7Mc)
 - [[有求必应]Java版联机教程（可用于手机与电脑Java版互通）](https://www.bilibili.com/video/BV1So4y1t7q9)
 - (欢迎上榜)
+
+
+
+
 
 *最后一次更新于 2023/6/25*
 
