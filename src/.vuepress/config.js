@@ -40,7 +40,8 @@ module.exports = {
         nav:[
             { text: '首页', link: '/' },
             { text: '常见问题', link: '/problems/' },
-            { text: '使用教程', link: '/use/' }
+            { text: '使用教程', link: '/use/' },
+            { text: ' 配置指南', link: '/guides/' }
         ],
         lastUpdated: '该文章最后更新于: ', // string | boolean
     }
