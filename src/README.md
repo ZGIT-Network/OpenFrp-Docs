@@ -4,7 +4,6 @@ tagline:
 ---
 
 <!-- 由 云默安 在 2023/5/1 修改。 -->
-
 <!-- 由 狐狸汉克 在 2023/6/25 修改。 -->
 
 
@@ -36,13 +35,10 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 
 
 # 官方用户交流/反馈群
-QQ群较为活跃，建议加入QQ群
-
 ### QQ群
 - [OpenFrp 用户交流群 ①](https://jq.qq.com/?_wv=1027&k=Rmq2B1uQ) (注: 问题回答错误将无法加入群聊，你可以更换到别的群。)
 - [OpenFrp 用户交流群 ②](https://jq.qq.com/?_wv=1027&k=ju2Ki3Fn)
 - [OpenFrp 用户交流群 ③](https://jq.qq.com/?_wv=1027&k=CnQINlkJ)
-- 一群较为专业，三群适合各位小白进入。
 ### 微信群
 ![企业微信二维码 ](https://d.of.gs/images/WxCodeMin.png)
 
@@ -58,6 +54,8 @@ QQ群较为活跃，建议加入QQ群
 - [[OF内网穿透] 超简单Minecraft我的世界联机教程-离线模式也可以联机啦！](https://www.bilibili.com/video/BV1SD4y1H758)
 - [2分钟！学会用自己电脑开服](https://www.bilibili.com/video/BV1Ek4y1E7Mc)
 - [[有求必应]Java版联机教程（可用于手机与电脑Java版互通）](https://www.bilibili.com/video/BV1So4y1t7q9)
+- [超简单我的世界离线联机教程(外置登录)](https://b23.tv/BV1Jh4y1g7W8)
+- [我的世界超简单的内网穿透联机教程(在线模式)](https://b23.tv/BV1rg4y1V7dq)
 - (欢迎上榜)
 
 
