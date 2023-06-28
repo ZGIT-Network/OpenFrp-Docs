@@ -40,7 +40,7 @@ OpenFrp诞生于2021/7/17，由ZGIT Network 与 衡阳百胜信息科技有限�
 - [OpenFrp 用户交流群 ②](https://jq.qq.com/?_wv=1027&k=ju2Ki3Fn)
 - [OpenFrp 用户交流群 ③](https://jq.qq.com/?_wv=1027&k=CnQINlkJ)
 ### 微信群
-![企业微信二维码 ](https://d.of.gs/images/WxCodeMin.png)
+<img alt="企业微信二维码" width=250 src="https://d.of.gs/images/WxCodeMin.png"> 
 
 ### 钉钉群
 - [点击加入](https://qr.dingtalk.com/action/joingroup?code=v1,k1,qHCW+rhCFYsFlDYj84QH3dMCVHMaDno5qMaY9MzAS5Y=&_dt_no_comment=1&origin=11)
