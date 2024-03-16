@@ -11,6 +11,7 @@ tagline:
 ### 社区贡献者
 欢迎帮助我们完善我们的使用文档，可前往 [本文档的Github仓库](https://github.com/ZGIT-Network/OpenFrp-Docs) 提交 PR 即可，我们将定期处理合并请求并由 Action 自动构建。
 对我们的文档贡献较大的贡献者，我们将赠与 VIP 或其它内容表示感谢。
+:::
 
 # 概述
 
