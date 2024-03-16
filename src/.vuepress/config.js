@@ -1,7 +1,19 @@
 module.exports = {
     title: 'OpenFrp Docs',
     description: '分享每一份技术。',
-    plugins: ['@vuepress/last-updated']
+    plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          // 不要忘了安装 moment
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow()
+        }
+      }
+    ]
+  ]
     themeConfig: {
         sidebar: {
             '/use/':[
@@ -44,6 +56,6 @@ module.exports = {
             { text: '配置指南', link: '/guides/' }
         ],
             
-        lastUpdated: '该文章最后更新于: ', // string | boolean
+        lastUpdated: '该文章最后更新于 ', // string | boolean
     }
 }
