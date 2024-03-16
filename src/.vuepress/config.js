@@ -1,7 +1,7 @@
 module.exports = {
     title: 'OpenFrp Docs',
     description: '分享每一份技术。',
-
+    plugins: ['@vuepress/last-updated']
     themeConfig: {
         sidebar: {
             '/use/':[
