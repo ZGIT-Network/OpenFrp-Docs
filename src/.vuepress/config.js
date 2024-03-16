@@ -43,6 +43,7 @@ module.exports = {
             { text: '使用教程', link: '/use/' },
             { text: '配置指南', link: '/guides/' }
         ],
+            
         lastUpdated: '该文章最后更新于: ', // string | boolean
     }
 }
