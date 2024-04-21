@@ -32,7 +32,7 @@
 | 账户 | 密码 |
 | --- | --- |
 | Administrator | 无 |
-| Administrator | 123456 |
+| Administrator | 114514 |
 | root | password |
 | Administrator | (密码在提示中) |
 | ... | 键盘上的连续字母 / 数字 |
