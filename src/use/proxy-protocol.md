@@ -21,12 +21,13 @@
 - X-Forwarded-For 访问头
 - Proxy Protocol
 
+您需要根据您穿透的本地服务选用合适的方案。
 
 ### XFF 请求头
 
-> 该方案仅适用于 HTTP 隧道，不适用于 HTTPS、TCP、UDP 等隧道，所以推荐方案 2
+::: warning该方案仅适用于 HTTP 隧道，不适用于 HTTPS、TCP、UDP 等隧道，所以推荐方案 2 :::
 
-使用 HTTP 隧道时，FRPC 会自动将客户端的请求 IP 追加到 X-Forwarded-For 尾部，您的应用程序可以通过读取这两个请求头来获取客户端真实 IP。您可以参考 MDN 文档 获取更多信息。
+使用 HTTP 隧道时，FRPC 会自动将客户端的请求 IP 追加到 X-Forwarded-For 尾部，您的应用程序可以通过读取这两个请求头来获取客户端真实 IP。您可以参考 [MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Forwarded-For) 获取更多信息。
 
 请注意，XFF 头的前半部分是 用户完全可控 的，因此 前面的数据并不可靠。我们推荐您只读取最后一个 IP，并且总是做好数据过滤以防出现安全问题。
 
@@ -36,18 +37,26 @@ X-Forwarded-For: <client>, <proxy1>, ...,<连接到 FRPC 的 IP>
 
 # 例如:
 X-Forwarded-For: 127.0.0.1
-X-Forwarded-For: 127.0.0.1; openfrp , 114.5.1.4
+X-Forwarded-For: 127.0.0.1; openfrp , 114.51.4.191 , 114.114.114.114
 ```
 
 ### Proxy Protocol
 
-> 使用该方案时必须在本地服务也做相应的配置，只修改 FRP 配置会造成 隧道完全不可用。
+::: warning
+使用该方案时必须在本地服务也做相应的配置，只修改 FRP 配置会造成 隧道完全不可用。
+:::
 
 Proxy Protocol 是由 HAProxy 开发者 Willy 提出的一种反向代理协议，目前已被广泛支持。您可以参考 [HAProxy 文档](http://www.haproxy.org/download/1.8/doc/proxy-protocol.txt) 获取更多信息。
 
-在隧道配置中启用**高级设置**并添加如下自定义配置后，FRPC 就会在请求本地服务时应用 HAProxy 协议：
+在隧道配置中设定 **高级设置** 并启用 `Proxy Protocol V2` 后，FRPC 就会在请求本地服务时应用 HAProxy 协议：
+![](./image/fc6bcd9c1d849b091b68a6f3e398a482.png)
+
+注：通过此开关启用的 Proxy Protocol 默认是 v2版本。
+
+若程序仅支持 v1 版本的 Proxy Protocol ，请手动添加配置文件。同样的，也可以通过此功能手动添加Proxy Protocol v2 的有关配置。
 ```
-proxy_protocol_version = <v1|v2>
+transport.proxyProtocolVersion = "v1|v2"
 ```
-目前 Proxy Protocol 有两个版本：v1 和 v2，请先调查您所使用的本地服务支持哪个版本再进行配置。如果两个版本都支持的，我们推荐您使用 v2 以提高传输效率。
+
+Proxy Protocol 有两个版本：v1 和 v2，请先调查您所使用的本地服务支持哪个版本再进行配置。如果两个版本都支持的，我们推荐您使用 v2 以提高传输效率。
 
