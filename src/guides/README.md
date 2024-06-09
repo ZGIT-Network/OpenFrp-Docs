@@ -647,9 +647,75 @@ https://cowtransfer.com/s/3a06bd6050a64c
 [1]: https://www.depicus.com/wake-on-lan/wake-on-lan-cmd
 [2]: https://www.depicus.com/downloads/wolcmd.zip
 
+## 部署 MCSManager 管理面板
+### 0.1 前言
 
+> [!IMPORTANT]
+> 使用 MCSManager 管理面板需要一定的基础知识（例如启动命令），下载 MCSManager 面板请前往[ MCSManager 的官网](https://mcsmanager.com/)下载。
 
+使用 MCSManager 面板即代表您默认同意承担**节点掉线导致的无法访问服务器后台**的风险！
 
+使用 MCSManager 时，请设置一个高强度的密码，避免密码被暴力破解，也请不要使用诸如 **12341234**、**12345678**、**abc123456** 等低强度的密码！
+
+### 0.2 系统环境
+
+教程将以 **Windows Server 2012 R2 系统**，**MCSManager 10** 做示范，其它版本的操作系统可能有差异。
+
+请确保在运行 MCSManager 时，您的账户为 Administrator 或具有管理员权限的账户！
+
+### 1.1 启动 MCSManager 面板
+
+当您下载并解压完毕 MCSManager 面板之后，您将会看到如下界面：
+
+![MCSMinstalled](https://s3.bmp.ovh/imgs/2024/06/09/2f951f7bdf07b080.png)
+
+双击 `start.bat`，启动 MCSManager 面板。成功启动后，您应该会看到两个 `node_app` 的窗口，这两个窗口是 MCSManager 的主窗口，无须担心。
+
+![MCSMnodeapp](https://s3.bmp.ovh/imgs/2024/06/09/21a6c86b2f66cb02.png)
+
+稍等一会后，您的默认浏览器应该会自动打开 `localhost:23333/#/install` 这个网站。在此处，`localhost` 指的就是 `127.0.0.1`，把它记住，等会还要用。
+
+此时，您可以按照 MCSManager 的提示一步步操作，部署自己的 Minecraft（或其它游戏）的服务器。
+
+### 1.2 设置
+
+![MCSMsettings](https://s3.bmp.ovh/imgs/2024/06/09/f3784204bde8ed12.png)
+
+在默认情况下，您的面板端口默认是 `23333`，这个端口即是一会要穿透出去的端口。您也可以自定义一个五位数端口，例如 `11451`、`54188` 等端口。
+
+启动 OpenFrp 软件，创建一个隧道，将本地地址设置为 `127.0.0.1`，端口设置为 `23333`（即刚才的面板端口）。名字可以起一个自己好记的端口，方便自己，也方便运维（如果您的服务器拥有管理团队）。
+
+以 `#15 驻马店移动`节点为例，设置应该如下图一般：
+
+![MCSMtoFrp](https://s3.bmp.ovh/imgs/2024/06/09/01d4350bb2549389.png)
+
+创建完毕后，您可以直接开启并访问这个地址。注意，您必须使用 IP 地址访问（即 `xxx.xxx.xxx.xxx:xxxxx`），否则您将无法访问面板。
+
+### 2 远端服务器配置
+
+如果所有的设置都正确，您应该可以看到如下界面：
+
+![REMOTE](https://s3.bmp.ovh/imgs/2024/06/09/2e8aa8a6548c3278.png)
+
+恭喜您！您已经完成了基础配置！
+
+接下来，我们将要进行远程服务器配置。首先，请牢记每一个 MCSManager 默认面板节点端口默认都是 `24444`，这个端口很重要！请记住！
+
+在 OpenFrp 中，创建一个本地地址为 `127.0.0.1`、本地端口为 `24444` 的节点。设置如图：
+
+![remotepointsets](https://s3.bmp.ovh/imgs/2024/06/09/e905dc863dbd9471.png)
+
+创建隧道，开启隧道。
+
+在日志中，找到对应的 IP 地址，复制它。
+
+![checklog](https://s3.bmp.ovh/imgs/2024/06/09/714540ceac4a8ada.png)
+
+在 MCSManager 面板中，找到`应用实例`，点击右侧的`选择远程节点`，点击`配置远程节点`，点击`新增节点`。配置如下图：
+
+![mcsmlast](https://s3.bmp.ovh/imgs/2024/06/09/dd60f2e5cf7d2d7e.png)
+
+点击`确定`，即可完成最后一步的配置。此时您应该能看到刚刚添加的节点了。
 
 ## 更多...
 
