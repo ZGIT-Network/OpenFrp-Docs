@@ -650,7 +650,6 @@ https://cowtransfer.com/s/3a06bd6050a64c
 ## 部署 MCSManager 管理面板
 ### 0.1 前言
 
-> [!IMPORTANT]
 > 使用 MCSManager 管理面板需要一定的基础知识（例如启动命令），下载 MCSManager 面板请前往[ MCSManager 的官网](https://mcsmanager.com/)下载。
 
 使用 MCSManager 面板即代表您默认同意承担**节点掉线导致的无法访问服务器后台**的风险！
