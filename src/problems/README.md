@@ -3,7 +3,7 @@
 [[TOC]]
 
 ## 客户端报错
-> **我们推荐使用Ez Startup启动您的隧道,可以避免 下表 大部分问题。**
+> **我们推荐使用 简易启动 功能或者图形客户端(OpenFrp Lanuhcer)启动您的隧道,可以避免 下表 大部分问题。**
 
 请查看日志，下表为常见报错及解决办法
 | 英文 | 中文 | 备注 |
@@ -22,7 +22,7 @@
 | i/o deadline reached | I/O繁忙 | 节点可能过载，建议换一个节点 |
 | router config conflict | *URL 路由冲突* | [点此查看详细说明](#url-路由冲突) |
 | Request failed: `XXX` `YYY` | *API 请求失败* | [点此查看详细说明](#api-请求失败) |
-| reconnect to server error: dial tcp 'XXX ': connect: connection refused |重连失败：服务器拒绝连接|可能是你选择的节点正在遭受攻击。[请查看节点状态](https://kuma.openfrp.net/status/of)，等待恢复或换一个节点。|
+| reconnect to server error: dial tcp 'XXX ': connect: connection refused |重连失败：服务器拒绝连接|可能是你选择的节点正在遭受攻击。[请查看节点状态](https://kuma.openfrp.net/)，等待恢复或换一个节点。|
 
 ### 登录节点失败, 请检查网络连接
 
@@ -35,7 +35,7 @@
    ping cn-shanghai.openfrp.top
    ```
 
-1. 请查看 [节点状态](https://status.openfrp.net/) 页面对应节点是否在线
+1. 请查看 [节点状态](https://kuma.openfrp.net/) 页面对应节点是否在线
 
 | 节点在线 | PING 测试 | 可能原因                                   | 解决方案          |
 | :------: | :-------: | ------------------------------------------ | ----------------- |
@@ -102,7 +102,7 @@ docker inspect （您的容器名称） | grep NetworkMode
 - 检查防火墙、杀毒软件是否拦截了 FRPC 的请求
 - 检查宽带是否存在到期未续费等情况，电脑能否正常 **打开网站**（例如 Bing）
 
-如果还是没有什么头绪，可以查看 [外部状态监控](https://status.openfrp.net/) 中 API 是否正常在线 (<span style="color: #3bd671">**Online**</span>)，如果不在线请联系管理员。
+如果还是没有什么头绪，可以查看 [外部状态监控](https://kuma.openfrp.net/) 中 API 是否正常在线 (<span style="color: #3bd671">**Online**</span>)，如果不在线请联系管理员。
 
 
 
@@ -118,9 +118,13 @@ docker inspect （您的容器名称） | grep NetworkMode
 
 ### 杀毒软件提示启动器有病毒
 
-若您是在官方网站下载的启动器，则极大概率是误报，建议您在[杀软中添加白名单](https://docs.openfrp.net/use/desktop-launcher.html#%E5%8A%A0%E5%85%A5%E7%B3%BB%E7%BB%9F%E7%99%BD%E5%90%8D%E5%8D%95)然后重新安装启动器。
+若您是在官方网站下载的启动器，则极大概率是误报，建议您在[杀软中添加白名单](https://openfrp.wiki/use/desktop-launcher.html#%E5%8A%A0%E5%85%A5%E7%B3%BB%E7%BB%9F%E7%99%BD%E5%90%8D%E5%8D%95)然后重新安装启动器。
 
-若您在非官方网站下载启动器，请删除并去官方网站[软件下载 | OpenFrp管理面板](https://console.openfrp.net/home/download)重新下载启动器。 <strong style="color:red;">非官方渠道下载的启动器有被植入病毒的风险</strong>
+若您在非官方网站下载启动器，请删除并去官方网站[OpenFrp管理面板 - 下载中心](https://console.openfrp.net/download)重新下载启动器。 <strong style="color:red;">非官方渠道下载的启动器有被植入病毒的风险</strong>
+
+OpenFrp Lanucher 启动器已完全开源，开源地址：[https://github.com/ZGIT-Network/OpenFrpLauncher](https://github.com/ZGIT-Network/OpenFrpLauncher)。
+
+*开放映射启动器软件为完全自主知识产权软件，已获得注册登记。 登记号: 2024SR0589290。*
 
 
 
@@ -197,7 +201,7 @@ OpenFrp支持 FRP 官方最新版本以及其他的 FRP 发行版本，您可以
 - 更换设备访问 (如手机更换为电脑)
 - 更换网络环境访问 (如 WiFi 更换为 4G、5G 网络)
 - 更换浏览器访问 (推荐使用 Google Chrome / Microsoft Edge / Firefox)
-- 查看[状态监控](https://status.openfrp.net/)页面中 #0 OpenFrp - 主站 是否正常
+- 查看[状态监控](https://kuma.openfrp.net/)页面中 #0 OpenFrp - 主站 是否正常
 - 查看在 OpenFrp 用户交流群 中是否有故障通知
 
 ### 增值服务相关
@@ -209,7 +213,7 @@ OpenFrp支持 FRP 官方最新版本以及其他的 FRP 发行版本，您可以
 ### 实名相关
 #### 怎么进行实名验证
 
-1. 进入[OpenFrp管理面板 - 个人中心](https://www.openfrp.net/home/user)
+1. 进入[OpenFrp管理面板 - 个人中心](https://console.openfrp.net/usercenter)
 2. 点击 "实名验证"
 3. 提交 您的身份证信息
 
