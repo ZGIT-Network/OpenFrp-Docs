@@ -25,7 +25,9 @@
 
 ### XFF 请求头
 
-::: warning该方案仅适用于 HTTP 隧道，不适用于 HTTPS、TCP、UDP 等隧道，所以推荐方案 2 :::
+::: warning
+该方案仅适用于 HTTP 隧道，不适用于 HTTPS、TCP、UDP 等隧道，所以推荐方案 2
+:::
 
 使用 HTTP 隧道时，FRPC 会自动将客户端的请求 IP 追加到 X-Forwarded-For 尾部，您的应用程序可以通过读取这两个请求头来获取客户端真实 IP。您可以参考 [MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Forwarded-For) 获取更多信息。
 
