@@ -3,7 +3,7 @@
 [[TOC]]
 
 ## 客户端报错
-> **我们推荐使用 简易启动 功能或者图形客户端(OpenFrp Lanuhcer)启动您的隧道,可以避免 下表 大部分问题。**
+> **我们推荐使用 简易启动 功能或者图形客户端(OpenFrp Launcher)启动您的隧道,可以避免 下表 大部分问题。**
 
 请查看日志，下表为常见报错及解决办法
 | 英文 | 中文 | 备注 |
@@ -23,6 +23,7 @@
 | router config conflict | *URL 路由冲突* | [点此查看详细说明](#url-路由冲突) |
 | Request failed: `XXX` `YYY` | *API 请求失败* | [点此查看详细说明](#api-请求失败) |
 | reconnect to server error: dial tcp 'XXX ': connect: connection refused |重连失败：服务器拒绝连接|可能是你选择的节点正在遭受攻击。[请查看节点状态](https://kuma.openfrp.net/)，等待恢复或换一个节点。|
+| Get "xxx": tls: failed to verify certificate: x509: certificate signed by unknown authority | 证书验证失败 | [点此查看详细说明](#api-请求失败) |
 
 ### 登录节点失败, 请检查网络连接
 
@@ -98,7 +99,7 @@ docker inspect （您的容器名称） | grep NetworkMode
 
 - 检查 SSL 问题 (一般不存在)
   - Windows 系统请使用 **Edge 等现代浏览器** 访问 `http://of-dev-api.bfsea.xyz/` 查看是否出现安全警告，如果出现请安装系统更新或者手动安装根证书
-  - Linux 系统可以使用 `tcping http://of-dev-api.bfsea.xyz/` 检查是否存在证书错误，如果出现证书错误可以尝试安装 (或更新) `ca-certificates` 包
+  - Linux 系统可以使用 `tcping http://of-dev-api.bfsea.xyz/` 检查是否存在证书错误，如果出现证书错误可以尝试安装 (或更新) `ca-certificates` 包, 若仍无效且使用 Termux 请尝试手动安装根证书或使用配置文件启动
 - 检查防火墙、杀毒软件是否拦截了 FRPC 的请求
 - 检查宽带是否存在到期未续费等情况，电脑能否正常 **打开网站**（例如 Bing）
 
