@@ -70,6 +70,7 @@ OpenFrp诞生于2021/7/17，由 ZGIT Network 与 衡阳百胜信息科技有限�
 - [[有求必应]Java版联机教程（可用于手机与电脑Java版互通）](https://www.bilibili.com/video/BV1So4y1t7q9)
 - [超简单我的世界离线联机教程(外置登录)](https://b23.tv/BV1Jh4y1g7W8)
 - [我的世界超简单的内网穿透联机教程(在线模式)](https://b23.tv/BV1rg4y1V7dq)
+- [想要与好友联机却无能为力？教你使用OpenFRP进行内网穿透！免费！无年龄限制！](https://www.bilibili.com/video/BV1TSbfe1Ef1)
 - (欢迎上榜)
 
 
