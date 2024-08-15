@@ -18,32 +18,50 @@ FRP 本质上只有转发流量的功能,并没有标明`我是从哪来? `<br>
 
 ---
 ### 代理端方面设置一览
-  <table>
-    <tr> <td>服务端类型</td> <th>Velocity</th> <th>BungeeCord</th> <th>Paper (游戏版本>=1.19 且单端模式)</th> </tr>
-    <tr> <td>文件名称/路径</td> <td>velocity.yaml</td> <td>config.yaml</td> <td>config/paper-global.yml</td>
-  <tr> <td>要修改的内容<br>(不要直接复制，<br>看修改的参数)</td>
-<td><pre><code class="language-toml">[advanced]
-connection-timeout = 5000
-# ...
-# 启用对 HAProxy 的兼容
-#(默认为Proxy-Protocol-V2)
-haproxy-protocol = true
-</code><pre></td>
-<td><pre><code class="language-yaml">listeners:
-- query_port: 25577
-  # 非完整 Config 请勿复制粘贴
-  # 将此项值改为 `true`
-  proxy_protocol: true
-</code><pre></td>
-<td><pre><code class="language-yaml">proxies:
-  proxy-protocol: true
-</code><pre></td>
+<table>
+  <tr>
+    <td>服务端类型</td>
+    <th>Velocity</th>
+    <th>BungeeCord</th>
+    <th>Paper (游戏版本>=1.19 且单端模式)</th>
+  </tr>
+  <tr>
+    <td>文件名称/路径</td>
+    <td>velocity.yaml</td>
+    <td>config.yaml</td>
+    <td>config/paper-global.yml</td>
+  <tr>
+    <td>要修改的内容<br>(不要直接复制，<br>看修改的参数)</td>
+    <td>
+      <pre><code class="language-toml">[advanced]
+      connection-timeout = 5000
+      # ...
+      # 启用对 HAProxy 的兼容
+      #(默认为Proxy-Protocol-V2)
+      haproxy-protocol = true
+      </code><pre>
+
+    </td>
+    <td>
+      <pre><code class="language-yaml">listeners:
+      - query_port: 25577
+        # 非完整 Config 请勿复制粘贴
+        # 将此项值改为 `true`
+        proxy_protocol: true
+      </code><pre>
+
+    </td>
+    <td>
+      <pre><code class="language-yaml">proxies:
+        proxy-protocol: true
+      </code><pre> 
+    </td>
     </tr>
     <tr>
-    <td>重载指令<br>(在控制台输入<br>不要带斜杠)</td>
-    <td>/velocity reload</td>
-    <td>/greload</td>
-    <td>/paper reload</td>
+      <td>重载指令<br>(在控制台输入<br>不要带斜杠)</td>
+      <td>/velocity reload</td>
+      <td>/greload</td>
+      <td>/paper reload</td>
     </tr>
   </table>
 
@@ -56,22 +74,27 @@ haproxy-protocol = true
 ~除非Frpc之后会自动加载HaProxy协议，否则这个地方依旧有用~
 
 <table>
-    <tr> <td>Frpc运行方式</td> <th>配置文件</th> <th>网页修改</th> </tr>
-    <tr> <td>修改方法与内容</td>
-<td><pre><code class="language-ini">
-[您的隧道名称]
-# ...(这里代表其他配置项目)
-# 上面那行隧道名称是提醒你底下这行要插入哪里
-# 看位置和顺序
-proxy_protocol_version = v2
-</code><pre></td>
-<td><pre><code>在网站的管理隧道内
-Minecraft穿透隧道这一行
-点击旁边的编辑
-在更多配置内插入以下内容，并保存
-·
-proxy_protocol_version = v2
-</code><pre></td>
+    <tr> 
+      <td>Frpc运行方式</td> 
+      <th>配置文件</th> 
+      <th>网页修改</th> 
+    </tr>
+    <tr> 
+      <td>修改方法与内容</td>
+      <td><pre><code class="language-ini">
+      [您的隧道名称]
+      # ...(这里代表其他配置项目)
+      # 上面那行隧道名称是提醒你底下这行要插入哪里
+      # 看位置和顺序
+      proxy_protocol_version = v2
+      </code><pre></td>
+      <td><pre><code>在网站的管理隧道内
+      Minecraft穿透隧道这一行
+      点击旁边的编辑
+      在更多配置内插入以下内容，并保存
+      ·
+      proxy_protocol_version = v2
+      </code><pre></td>
     </tr>
   </table>
 
@@ -125,33 +148,34 @@ proxy_protocol_version = v2
     <tr> <td  colspan="2">旧版配置 paper.yml</td> </tr>
     <tr> <th>Velocity</th> <th>BungeeCord</th> </tr>
     <tr>
-<td><pre><code class="language-yaml">settings:
-  velocity-support:
-    enabled: true
-    online-mode: true
-    secret: <你自己Velocity服务端的>
-</code><pre></td>
-<td><pre><code class="language-yaml">settings: 
-    bungee-online-mode: true
-</code><pre></td>
+      <td><pre><code class="language-yaml">settings:
+        velocity-support:
+          enabled: true
+          online-mode: true
+          secret: <你自己Velocity服务端的>
+      </code><pre></td>
+      <td><pre><code class="language-yaml">settings: 
+          bungee-online-mode: true
+      </code><pre></td>
     </tr>
-  </table><br>
+  </table>
+  <br>
   
   
   <table>
     <tr> <td  colspan="2">新版配置: config/paper-global.yml </td> </tr>
     <tr> <th>Velocity</th> <th>BungeeCord</th> </tr>
     <tr>
-<td><pre><code class="language-yaml">proxies:
-  velocity:
-    enabled: true
-    online-mode: true
-    secret: <你自己Velocity服务端的>
-</code><pre></td>
-<td><pre><code class="language-yaml">proxies:
-  bungee-cord:
-    online-mode: true
-</code><pre></td>
+      <td><pre><code class="language-yaml">proxies:
+        velocity:
+          enabled: true
+          online-mode: true
+          secret: <你自己Velocity服务端的>
+      </code><pre></td>
+      <td><pre><code class="language-yaml">proxies:
+        bungee-cord:
+          online-mode: true
+      </code><pre></td>
     </tr>
   </table>
   
