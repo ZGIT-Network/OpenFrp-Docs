@@ -33,14 +33,15 @@ FRP 本质上只有转发流量的功能,并没有标明`我是从哪来? `<br>
   <tr>
     <td>要修改的内容<br>(不要直接复制，<br>看修改的参数)</td>
     <td>
-      <pre><code class="language-toml">[advanced]
-      connection-timeout = 5000
-      # ...
-      # 启用对 HAProxy 的兼容
-      #(默认为Proxy-Protocol-V2)
-      haproxy-protocol = true
-      </code><pre>
-
+      <pre>
+        <code class="language-toml">[advanced]
+        connection-timeout = 5000
+        # ...
+        # 启用对 HAProxy 的兼容
+        #(默认为Proxy-Protocol-V2)
+        haproxy-protocol = true
+        </code>
+      <pre>
     </td>
     <td>
       <pre><code class="language-yaml">listeners:
@@ -49,7 +50,6 @@ FRP 本质上只有转发流量的功能,并没有标明`我是从哪来? `<br>
         # 将此项值改为 `true`
         proxy_protocol: true
       </code><pre>
-
     </td>
     <td>
       <pre><code class="language-yaml">proxies:
