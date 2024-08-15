@@ -1,19 +1,13 @@
 {
-  "name": "openfrp-docs",
-  "description": "OpenFRP官方文档",
-  "version": "1.1.0",
-  "license": "GPL3/0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "build": "vuepress-vite build src",
-    "clean-dev": "vuepress-vite dev src --clean-cache",
-    "dev": "vuepress-vite dev src",
-    "update-package": "npx vp-update"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "engines": {
+    "node": ">=14.0.0 <18.0.0"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.14",
-    "vue": "^3.4.31",
-    "vuepress": "2.0.0-rc.14",
-    "vuepress-theme-hope": "2.0.0-rc.52"
+    "vuepress": "1.9.7"
   }
 }
