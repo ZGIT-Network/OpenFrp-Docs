@@ -18,34 +18,75 @@ FRP 本质上只有转发流量的功能,并没有标明`我是从哪来? `<br>
 
 ---
 ### 代理端方面设置一览
-| 服务端类型                           | Velocity                                                                 | BungeeCord                                                                 | Paper (游戏版本>=1.19 且单端模式) |
-|--------------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------|
-| 文件名称/路径                        | velocity.yaml                                                            | config.yaml                                                                 | config/paper-global.yml           |
-| 要修改的内容<br>(不要直接复制，<br>看修改的参数) | ```toml [advanced] connection-timeout = 5000 # ... # 启用对 HAProxy 的兼容 #(默认为Proxy-Protocol-V2) haproxy-protocol = true ``` | ```yaml listeners: - query_port: 25577 # 非完整 Config 请勿复制粘贴 # 将此项值改为 `true` proxy_protocol: true ``` | ```yaml proxies: proxy-protocol: true ``` |
-| 重载指令<br>(在控制台输入<br>不要带斜杠) | /velocity reload                                                         | /greload                                                                    | /paper reload                     |
+
+#### **Velocity**
+
+打开`velocity.yaml`文件,修改并保存:
+```toml
+[advanced] 
+connection-timeout = 5000
+# ...(略) 
+
+haproxy-protocol = true # 启用对 HAProxy 的兼容 (默认为Proxy-Protocol-V2) 
+```
+
+#### **BungeeCord**
+
+打开`config.yml`文件,修改并保存:
+```yaml 
+listeners: 
+- query_port: 25577 
+# ...(略)
+
+proxy_protocol: true # 将此项值改为 `true` 
+```
 
 
+#### **Paper (游戏版本>=1.19 且单端模式)**
 
-可选项(`Velocity`/`BungeeCord`): 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能连接到服务器游玩<br>
+打开`config/paper-global.yml`文件,修改并保存:
+
+```yaml 
+# ...(略)
+proxies: proxy-protocol: true 
+# ...(略)
+```
+
+::: tip
+可选项(`Velocity`/`BungeeCord`): 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能连接到服务器游玩
+::: tip
 
 ---
 ### Frpc 端
 
 别急，代理那边改完之后还没结束，Frpc那边也需要修改<br>
-~除非Frpc之后会自动加载HaProxy协议，否则这个地方依旧有用~
+<s>除非Frpc之后会自动加载HaProxy协议，否则这个地方依旧有用</s>
 
-| Frpc运行方式   | 配置文件                                                                                                                                                            | 网页修改                                                                                                                                           |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| 修改方法与内容 | ```ini [您的隧道名称] # ...(这里代表其他配置项目) # 上面那行隧道名称是提醒你底下这行要插入哪里 # 看位置和顺序 proxy_protocol_version = v2 ``` | 在网站的管理隧道内 Minecraft穿透隧道这一行 点击旁边的编辑 在更多配置内插入以下内容，并保存 · proxy_protocol_version = v2                          |
+#### **读取本地配置文件**
+```ini 
+[您的隧道名称] 
+# ...(这里代表其他配置项目) 
+# 上面那行隧道名称是提醒你底下这行要插入哪里 
+# 看位置和顺序 
+proxy_protocol_version = v2 
+```
+#### **网页控制台修改**
 
+打开 [管理隧道 - OpenFrp Next](https://console.openfrp.net/manage-proxies)
 
+点击隧道右侧的扳手（操作） - 编辑 - 高级配置
+
+打开`Proxy Protocol V2`
+
+::: tip
 注意:`记得保存并重新打开Frpc才能生效`
+::: tip
 
 ## Geyser JE+BE?
 
-[Geyser](https://geysermc.org/) 是近几年来新型代理工具,但他可不就这么简单。<br>
+[Geyser](https://geysermc.org/) 是近几年来新型代理工具,但他可不这么简单。<br>
 他可以实现 Java Edtion 与 Bedrock Edtion 共同联机。<br>
-目前，支持的加载方式如下 [下载地址](https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/)
+目前，支持的加载方式如下 
 - 单独代理端
 - Spigot 插件
 - BungeeCord 插件
@@ -54,6 +95,8 @@ FRP 本质上只有转发流量的功能,并没有标明`我是从哪来? `<br>
 - Sponge 插件
 
 个人建议：`Geyser`应与[Floodgate](https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/)一起并以相同的方式使用
+
+*[Geyser下载地址](https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/)*
 
 ### 我可以与外置一起用吗？
 
@@ -88,35 +131,56 @@ FRP 本质上只有转发流量的功能,并没有标明`我是从哪来? `<br>
   
 ### 旧版配置 paper.yml
 
-| Velocity                                                                                   | BungeeCord                                     |
-|--------------------------------------------------------------------------------------------|------------------------------------------------|
-| ```yaml settings: velocity-support: enabled: true online-mode: true secret: <你自己Velocity服务端的> ``` | ```yaml settings: bungee-online-mode: true ``` |
+**Velocity**
+```yaml 
+settings: 
+  velocity-support: 
+    enabled: true 
+  online-mode: true 
+  secret: <你自己Velocity服务端的> 
+```
+**BungeeCord**
+
+```yaml 
+settings: 
+  bungee-online-mode: true 
+```
 
 ### 新版配置: config/paper-global.yml
 
-| Velocity                                                                                   | BungeeCord                                     |
-|--------------------------------------------------------------------------------------------|------------------------------------------------|
-| ```yaml proxies: velocity: enabled: true online-mode: true secret: <你自己Velocity服务端的> ``` | ```yaml proxies: bungee-cord: online-mode: true ``` |
+**VeloCity**
+```yaml 
+proxies: 
+  velocity: 
+    enabled: true 
+    online-mode: true 
+    secret: <你自己Velocity服务端的> 
+```
+**BungeeCord**
+```yaml 
+proxies: 
+  bungee-cord: 
+    online-mode: true 
+```
 
   
 ---
 #### 单端 
-(不推荐，因为不能使用显示IP，Paper端除外)  ~以下内容以Paper服务端做举例~
+(不推荐，因为不能使用显示IP，Paper端除外)<br /><s>以下内容以Paper服务端做举例</s>
   
-  Paper的需要下载`Geyser`与`Floodgate` 并安装到`plugins文件夹`内<br>
-  (请根据您的服务端类型下载插件)
-  且需要下载`Authlib-injector`,放入与`paper.jar`同文件夹下<br>
-  并且你在使用`LittleSkin`提供的外置验证服务
+Paper的需要下载`Geyser`与`Floodgate` 并安装到`plugins`文件夹内<br>
+且需要下载`Authlib-injector`,放入与`paper.jar`同文件夹下<br>
+并且你在使用`LittleSkin`提供的外置验证服务
   
-  修改配置`server.properties`文件,找到并修改成如下,然后保存
-  ```properties
-  online-mode=true
-  ```  
-  按如下方式启动(指令为模板，请按顺序放置参数):
-  ```bash
-  java -javaagent:authlib-injector.jar=https://littleskin.cn/api/yggdrasil -jar paper.jar
-  ```
-  在基岩版登录时，使用微软登录(随时都可能暴毙)即可。
+修改配置`server.properties`文件,找到并修改成如下,然后保存
+```properties
+online-mode=true
+```  
+按如下方式启动(指令为模板，请按顺序放置参数):
+```bash
+java -javaagent:authlib-injector.jar=https://littleskin.cn/api/yggdrasil -jar paper.jar
+```
+在基岩版登录时，使用微软登录(随时都可能暴毙)即可。
 
 ---
 #### 关于 AuthLib-Injector 更多信息

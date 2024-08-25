@@ -142,7 +142,7 @@ http://192.168.31.112:4000/index.html
 
    ![DNS查询](./img/nslookup.jpg)
 
-“名称”需为xx.openfrp.top才代表解析同步成功���
+“名称”需为xx.openfrp.top才代表解析同步成功
 
 5. 本地的 Web 服务是否成功启动？隧道映射的本地 IP 和端口号是否正确？
 

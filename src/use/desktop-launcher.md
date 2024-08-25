@@ -16,7 +16,7 @@
 
 首先，您需要保证您的系统为 Windows 7 SP1,然后接着下一步。
 
-如果您下载的带有尾缀 "net481" ，请下载另一个尾椎为 "net462" 的版本，否则你将卡死在这一步。
+如果您下载的带有尾缀 "net481" ，请下载另一个尾缀为 "net462" 的版本，否则你将卡死在这一步。
 
 ![](./image/readme/fonf2.png)
 
@@ -34,15 +34,15 @@
 
 ![](./image/readme/dont-have-net481.png)
 
-请直接从官网下载另一个尾椎为 "net462" ,然后直接替换安装。
+请直接从官网下载另一个尾缀为 "net462" ,然后直接替换安装。
 
 ![](./image/readme/fonf2.png)
 
 ## 加入系统白名单
 
-如果您信任我们,可以把对应文件夹 / 文件 加入杀软白名单,如果您更信任杀软,您可以卸载我们的启动器且更换为上游官版 FRPC。
+如果您信任我们，可以把对应文件夹 / 文件 加入杀软白名单；如果您更信任杀软，您可以卸载我们的启动器并更换为上游官版 FRPC。
 
-如果您使用的是 Windows Defender ，请按照以下步骤进行:
+如果您使用的是 Windows Defender ，请按照以下步骤进行：
 
 ![](./image/readme/openSecure1.png)
 ![](./image/readme/secureOption2.png)
@@ -102,7 +102,11 @@ rticle-12415
 2. KB5028947
 3. KB5011048
 
-若您下载的为 .NET Framework 4.8.1 版本的启动器，请切换为 .NET Framework 4.6.2 版本的启动器。在此之后请勿安装 .NET Framework 4.8.1，否则问题将会复现。
+::: tip
+若您下载的为 .NET Framework 4.8.1 版本的启动器，请切换为 .NET Framework 4.6.2 版本的启动器。
+
+在此之后请勿安装 .NET Framework 4.8.1，否则问题将会再次出现。
+::: tip
 
 ### System.Configuration.ConfigurationErrorsException: 配置文件已被另一个程序更改。
 
