@@ -80,7 +80,7 @@ proxy_protocol_version = v2
 
 ::: tip
 注意:`记得保存并重新打开Frpc才能生效`
-::: tip
+::: 
 
 ## Geyser JE+BE?
 
