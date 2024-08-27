@@ -27,7 +27,7 @@ OpenFrp诞生于2021/7/17，由 ZGIT Network 与 衡阳百胜信息科技有限�
 基本服务不需收费，也就是您可以在我们的[服务条款](https://www.openfrp.net/policy/)及[内容策略](https://www.openfrp.net/content/)下自由的使用 Openfrp 所提供的端口映射服务。
 
 # 快速入门
-[使用方法](use)
+[使用教程](use)
 <br>
 [常见问题](problems)
 <br>
@@ -40,7 +40,7 @@ OpenFrp诞生于2021/7/17，由 ZGIT Network 与 衡阳百胜信息科技有限�
 
 # 捐赠
 
-如果你觉得OpenFrp好用或对你有帮助，或者想给予OpenFrp一点支持，欢迎点击[这里来赞助和支持我们](https://afdian.net/a/zgitnetwork)，或者购买本站的[增值服务](https://www.openfrp.net/home/addon)。
+如果你觉得OpenFrp好用或对你有帮助，或者想给予OpenFrp一点支持，欢迎点击[这里来赞助和支持我们](https://afdian.com/a/zgitnetwork)，或者购买本站的[增值服务](https://www.openfrp.net/home/addon)。
 
 如果您赞助了我们，请一定要备注您的QQ或者其他联系方式！我们将感激不尽！
 
@@ -74,5 +74,5 @@ OpenFrp诞生于2021/7/17，由 ZGIT Network 与 衡阳百胜信息科技有限�
 - (欢迎上榜)
 
 
-*最后一次更新于 2024/3/16*
+*最后一次更新于 2024/08/25*
 
