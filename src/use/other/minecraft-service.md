@@ -54,7 +54,7 @@ proxies: proxy-protocol: true
 
 ::: tip
 可选项(`Velocity`/`BungeeCord`): 下载[HaProxyDetector](https://github.com/andylizi/haproxy-detector/releases),并安装到`plugins`文件夹内,以便于不经过穿透也能连接到服务器游玩
-::: tip
+:::
 
 ---
 ### Frpc 端
@@ -80,7 +80,7 @@ proxy_protocol_version = v2
 
 ::: tip
 注意:`记得保存并重新打开Frpc才能生效`
-::: tip
+::: 
 
 ## Geyser JE+BE?
 
