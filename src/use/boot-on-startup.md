@@ -9,11 +9,13 @@
 ::: tip
 
 
-1. 使用wget或其他工具 [下载](https://d.of.gs/client/) 适合您操作系统架构的最新版本的frpc 
+1. 使用wget或其他工具 [下载](https://d.of.gs/client/) 适合您操作系统架构的最新版本的frpc
+   
 （例如: [frpc_linux_amd64.zip](https://d.of.gs/client/OpenFRP_0.57.0_e511492b_20240423/frpc_linux_amd64.tar.gz)） 
 
 
 下载完成后解压得到二进制文件，并赋予其执行权限 <br />
+
 ```bash 
 chmod +x ./frpc_linux_amd64
 ```
@@ -55,10 +57,12 @@ systemctl enable --now openfrp
 ```bash
 systemctl status openfrp
 ```
+
 ::: tip
 显示为 running 即代表正常运行。<br />
 如果一切顺利，您可以在网页面板查看到隧道已启动
 ::: tip
+
 
 ### 管理自启动服务
 要更改用户token或隧道id，请先编辑文件 `openfrp.service`，保存后执行命令:
