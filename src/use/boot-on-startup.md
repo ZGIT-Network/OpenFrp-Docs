@@ -8,6 +8,7 @@
 推荐使用Debian系统，始终不推荐使用CentOS系统，**!不支持 Termux 及其相关的程序!**
 ::: tip
 
+
 1. 使用wget或其他工具 [下载](https://d.of.gs/client/) 适合您操作系统架构的最新版本的frpc 
 （例如: [frpc_linux_amd64.zip](https://d.of.gs/client/OpenFRP_0.57.0_e511492b_20240423/frpc_linux_amd64.tar.gz)） 
 
