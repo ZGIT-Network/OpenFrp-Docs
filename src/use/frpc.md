@@ -1,10 +1,10 @@
-# FRPC 使用教程
+![image](https://github.com/user-attachments/assets/bcbf2a38-0d28-4953-949b-98c030dd3a5d)# FRPC 使用教程
 
 ## FRPC 的 HTTPS 功能
 
 ::: tip
 从 OpenFrp 5.0 (Ocean) 开始 AUTO TLS 功能已不再需要手动设置配置文件，以下为新版配置教程。
-::: tip
+::: 
 
 
 *以下为 OpenFRPC (0.44.0+) 版本才可使用的功能。*
@@ -49,7 +49,7 @@
 ## FRPC 的 HTTPS 功能(已过时，旧版，但保留备用)
 ::: tip
 旧版https文档已经迁移至[这里](./frpc-old)
-::: tip
+::: 
 
 ## Windows
 
@@ -91,7 +91,7 @@ uname -a
 
 ::: tip
 如果您的架构显示为 armv7l，但在下载对应程序后无法运行，提示 Illegal instruction ，这是因为您其实是 armel 而不是armhf，请下载 arm_garbage 版本重试
-::: tip
+::: 
 
 如果您的架构为 mips 或 mips64，还需要使用下面的命令来确定处理器的字节序
 
@@ -201,7 +201,7 @@ Docker 本地服务访问提示 <br/>
 这时，您需要将本地链接改成您
 - **服务器的 `内网IP`**  
 - 宿主机 `Docker0接口` (一般为172.17.0.1)
-::: tip
+::: 
 
 <!-- Docker THE END -->
 
