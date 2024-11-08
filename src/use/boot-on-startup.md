@@ -6,7 +6,7 @@
 
 ::: tip
 推荐使用Debian系统，始终不推荐使用CentOS系统，**!不支持 Termux 及其相关的程序!**
-::: tip
+:::
 
 
 1. 使用wget或其他工具 [下载](https://d.of.gs/client/) 适合您操作系统架构的最新版本的frpc
@@ -61,7 +61,7 @@ systemctl status openfrp
 ::: tip
 显示为 running 即代表正常运行。<br />
 如果一切顺利，您可以在网页面板查看到隧道已启动
-::: tip
+:::
 
 
 ### 管理自启动服务
@@ -89,7 +89,7 @@ docker会为所有容器自启动，这是默认值。<br />
 
 ::: tip
 本章节使用 `WinSW` 演示进行 `windows服务` 自启动，
-::: tip
+:::
 
 下载[frpc](https://d.of.gs/client/)
 
@@ -127,7 +127,7 @@ docker会为所有容器自启动，这是默认值。<br />
 
 ::: tip
 注意: 此文件夹请放在合适的位置，后续不能删除其中任何文件
-::: tip
+:::
 
 按住Shift 右键空白区域打开windows终端
 
