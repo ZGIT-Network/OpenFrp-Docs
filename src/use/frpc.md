@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/bcbf2a38-0d28-4953-949b-98c030dd3a5d)# FRPC 使用教程
 
 ## FRPC 的 HTTPS 功能
 
