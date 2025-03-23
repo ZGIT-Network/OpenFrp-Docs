@@ -13,6 +13,7 @@ export default defineConfig({
       lang: "zh-CN",
     },
   },
+  ignoreDeadLinks: true,
   //主题配置
   themeConfig: {
     //头上角要主题切换的文字 Appearance
