@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress dev src",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && vuepress build src"
+    "dev": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && vuepress dev src",
+    "build": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && vuepress build src"
   },
   "engines": {
     "node": "22.x"
