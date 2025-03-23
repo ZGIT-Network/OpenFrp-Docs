@@ -2,9 +2,9 @@
 
 欢迎各位共享自己的一份力量，不仅是方便自己，还是方便他人。
 
-# VuePress
+# VitePress
 
-Powered by [VuePress](https://vuepress.vuejs.org/) 
+Powered by [VitePress](https://vitepress.dev/) 
 
 ## Deloy
 

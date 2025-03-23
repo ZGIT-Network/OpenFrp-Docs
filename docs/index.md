@@ -1,11 +1,30 @@
 ---
-home: true
-tagline:
----
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+editLink: true
+hero:
+  name: "OpenFRP Docs"
+  text: "官方 Docs"
+  tagline: Powered by Vitepress
+  actions:
+    - theme: brand
+      text: 🎁开箱使用
+      link: /use
+    - theme: alt
+      text: 常见问题
+      link: /problems
+    - theme: alt
+      text: 配置指南
+      link: /guides
 
-<!-- 由 云默安 在 2024/3/16 修改。 -->
-<!-- 由 狐狸汉克 在 2023/6/25 修改。 -->
-<!-- 由 Yue-cn 在 2023/8/23 修改。 -->
+features:
+  - icon: 🖱️
+    title: 便于操作
+    details: 的源于 VitePress，这使得我们网站页面更有观赏性。同时，您也可以进行搜索，比浏览器默认的搜索功能更好。
+  - icon: 🥳
+    title: 社区
+    details: Docs 站全面开放，欢迎各位到 Github 上提出 PR，我们将定期处理合并请求并由 Action 自动构建。 对我们的文档贡献较大的贡献者，我们将赠与 VIP 或其它内容表示感谢。
+---
 
 ::: tip
 ### 文档已更新
@@ -52,13 +71,9 @@ OpenFrp诞生于2021/7/17，由 ZGIT Network 与 衡阳百胜信息科技有限�
 - [OpenFrp 用户交流群 ①](https://jq.qq.com/?_wv=1027&k=Rmq2B1uQ) (注: 问题回答错误将无法加入群聊，你可以更换到别的群。)
 - [OpenFrp 用户交流群 ②](https://jq.qq.com/?_wv=1027&k=ju2Ki3Fn)
 - [OpenFrp 用户交流群 ③](https://jq.qq.com/?_wv=1027&k=CnQINlkJ)
-### 微信群
-<img alt="企业微信二维码" width=250 src="https://d.of.gs/images/WxCodeMin.png"> 
 
 ### 钉钉群
 - [点击加入](https://qr.dingtalk.com/action/joingroup?code=v1,k1,qHCW+rhCFYsFlDYj84QH3dMCVHMaDno5qMaY9MzAS5Y=&_dt_no_comment=1&origin=11)
-
-
 
 # 推荐视频
 
@@ -74,5 +89,5 @@ OpenFrp诞生于2021/7/17，由 ZGIT Network 与 衡阳百胜信息科技有限�
 - (欢迎上榜)
 
 
-*最后一次更新于 2024/08/25*
+*最后一次更新于 2025/03/23*
 

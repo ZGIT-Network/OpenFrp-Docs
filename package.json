@@ -1,13 +1,13 @@
 {
-  "private": true,
   "scripts": {
-    "dev": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && vuepress dev src",
-    "build": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && vuepress build src"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "engines": {
     "node": "22.x"
   },
-  "devDependencies": {
-    "vuepress": "1.9.7"
+  "dependencies": {
+    "vitepress": "^1.6.3"
   }
 }
