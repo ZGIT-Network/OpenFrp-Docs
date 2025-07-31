@@ -1,24 +1,17 @@
-# Windows 桌面启动器
+# Windows WPF 桌面启动器
 
 如果您来到这里了,您可能是刚刚使用，因为很简单，压根不需要怎么看就会的。
 
 因为已整合网页版的登录，您不需要自备 UserToken, 直接进行登录操作即可 
 
-## 系统服务模式
+## 如何进行 FRPC 配置（例如证书）
 
-
-* 系统服务模式<br/>
-  **可以满足系统重启后,FRPC自动开启的需求**，适用于各种 RDP 服务需要 (建议您备用一款远程软件) 。在系统开启后(在登录页面前),服务便会启动，FRPC也会随着开启。
-* 守护进程模式<br/>
-  正常你不需要调整就为该模式，当重启后您需要 **经过登录页面登录后** 才能进行开机自启。(`就算是自动登录,也推荐上面第一方式。`)
+![](./image/readme/frpc-usrConfig.png)
 
 ## Windows 7 无法正常打开
 
 首先，您需要保证您的系统为 Windows 7 SP1,然后接着下一步。
 
-如果您下载的带有尾缀 "net481" ，请下载另一个尾缀为 "net462" 的版本，否则你将卡死在这一步。
-
-![](./image/readme/fonf2.png)
 
 由于国内系统精简过度 / 不喜欢更新，导致
 `Microsoft Root Certificate Authority 2011`
@@ -26,17 +19,22 @@
 
 您需要在互联网上找到该证书，然后安装。（过程略）
 
-接着，您便可以直接安装 .NET Framework (最低为4.6.2，建议4.8，且最好使用离线安装包)
+接着，您便可以直接安装 .NET Framework (版本 4.8，且最好使用离线安装包)
 
 ## 我是 Windows 10，但是也无法打开也无法卸载
 
-如图所示
+如图所示（可能内容不同）
 
 ![](./image/readme/dont-have-net481.png)
 
-请直接从官网下载另一个尾缀为 "net462" ,然后直接替换安装。
+请保证您的系统内安装了 .NET Framework 4.8 或者 .NET 9 Runtime（在您安装 Net9 编译版本时，后者是需要的）
 
-![](./image/readme/fonf2.png)
+## FRPC 功能异常
+![](./image/readme/frpc-tl-error.png)
+
+若您使用了 Windows Defender （不是防火墙），请参见下方 [加入系统白名单](#加入系统白名单)
+
+若您使用了火绒，且第一次使用时在**风险弹窗**点击了拒绝，请参见下图：![](./image/readme/secure-huorong.png)
 
 ## 加入系统白名单
 
@@ -110,26 +108,22 @@ rticle-12415
 
 ### System.Configuration.ConfigurationErrorsException: 配置文件已被另一个程序更改。
 
+一般不会出现这个情况，若真的出现了，请按照以下步骤：
+
 按下 Windows + R
 (Windows 键就是键盘上那颗徽标)
 输入:
 ```bash
-cmd /c rmdir /s /q %appdata%/../Local/OpenFrpLauncher
+cmd /c rmdir /s /q %appdata%/../Local/OpenFrp.Launcher
 ```
 
 ### System.Runtime.InteropServices.COMException: {已禁用桌面合成} 操作无法完成，因为已禁用桌面合成
 
 检查你是否在使用 Microsoft RDP 服务...
 
-如果是这样的话，请你右键启动器的桌面快捷图标，
-
-在目标这一框中后面加入 "--no-effect" (请在前面加空格分开)
+如果是这样的话，建议切换使用 Net9 编译版启动器
 
 ### 找不到 FRPC 文件
-
-如图所示
-
-![](./image/readme/non-frpc-file.png)
 
 请参见 [加入系统白名单](#加入系统白名单)
 
