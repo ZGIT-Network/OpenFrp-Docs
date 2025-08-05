@@ -43,6 +43,14 @@
 如果您使用的是 Windows Defender ，请按照以下步骤进行：
 
 ![](./image/readme/openSecure1.png)
+
+打开 Windows Defender 后，您有以下两个选项，其中方法 2 较为稳靠，在更新时不会触发规则。
+
+### 方法1：在拦截时到 "保护历史" 中找到相关记录，允许。
+![](./image/readme/wd-allow-on-dev.png)
+
+### 方法2: 添加文件夹白名单
+
 ![](./image/readme/secureOption2.png)
 ![](./image/readme/secureOption3.png)
 
