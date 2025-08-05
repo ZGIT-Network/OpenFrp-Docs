@@ -129,7 +129,7 @@ bedrock:
 | 主机记录     | 域名前缀 | 连接地址         |
 | :-------------:|:-------:| :-------------: |
 |`_minecraft._tcp`|    无    | `example.com`    |
-|`_minecraft._tcp.mc`|   www   | `mc.example.com`|
+|`_minecraft._tcp.mc`|   mc   | `mc.example.com`|
 |`_minecraft._tcp.abcd`|   abcd   | `abcd.example.com`|
 
 确认好你要设置的 **记录类型**、**记录值**、**主机记录** 和 **域名** 后，请到 **域名注册商控制台** 设置解析记录  
