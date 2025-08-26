@@ -4,7 +4,7 @@
 [[TOC]]
 
 ## 客户端报错
-> **我们推荐使用 简易启动 功能或者图形客户端(OpenFrp Launcher)启动您的隧道,可以避免 下表 大部分问题。**
+> **我们推荐使用 简易启动 功能或者 图形客户端 (WPF 或 CPL) 启动您的隧道, 或许可以避免 下表 大部分问题。**
 
 请查看日志，下表为常见报错及解决办法
 | 英文 | 中文 | 备注 |
@@ -82,7 +82,7 @@ docker常见网络环境有“bridge”（默认）、”host“和”macvlan“
 docker inspect （您的容器名称） | grep NetworkMode
 ```
 
-比如：如您的容器名称为OpenFRP（注意大小写），您应该输入 `docker inspect Openfrp | grep NetworkMode`
+比如：如您的容器名称为OpenFrp (注意大小写), 您应该输入 `docker inspect OpenFrp | grep NetworkMode`
 
 - 若输出为：`"NetworkMode": "host", `
 
@@ -99,8 +99,8 @@ docker inspect （您的容器名称） | grep NetworkMode
 请优先检查 API 连接性问题:
 
 - 检查 SSL 问题 (一般不存在)
-  - Windows 系统请使用 **Edge 等现代浏览器** 访问 `http://of-dev-api.bfsea.xyz/` 查看是否出现安全警告，如果出现请安装系统更新或者手动安装根证书
-  - Linux 系统可以使用 `tcping http://of-dev-api.bfsea.xyz/` 检查是否存在证书错误，如果出现证书错误可以尝试安装 (或更新) `ca-certificates` 包, 若仍无效且使用 Termux 请尝试手动安装根证书或使用配置文件启动
+  - Windows 系统请使用 **Edge 等现代浏览器** 访问 `https://of-dev-api.bfsea.xyz/` 查看是否出现安全警告，如果出现请安装系统更新或者手动安装根证书
+  - Linux 系统可以使用 `curl https://of-dev-api.bfsea.xyz/` 检查是否存在证书错误，如果出现证书错误可以尝试安装 (或更新) `ca-certificates` 包, 若使用 Termux 请在 `termux-chroot` 中先执行 `ln -sf tls /etc/ssl` 再尝试运行或直接使用配置文件启动
 - 检查防火墙、杀毒软件是否拦截了 FRPC 的请求
 - 检查宽带是否存在到期未续费等情况，电脑能否正常 **打开网站**（例如 Bing）
 
