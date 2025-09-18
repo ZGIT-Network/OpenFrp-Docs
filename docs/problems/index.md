@@ -129,6 +129,9 @@ OpenFrp Lanucher 启动器已完全开源，开源地址：[https://github.com/Z
 *开放映射启动器软件为完全自主知识产权软件，已获得注册登记。 登记号: 2024SR0589290。*
 
 
+### 隧道已被禁用
+前往[OpenFrp管理面板](https://console.openfrp.net),找到左侧菜单中的 隧道管理 一栏,左键对应隧道的状态的开关即可启用该隧道
+
 
 ## FRPC相关
 
