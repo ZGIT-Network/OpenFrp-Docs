@@ -20,7 +20,7 @@ hero:
 features:
   - icon: 🖱️
     title: 便于操作
-    details: 的源于 VitePress，这使得我们网站页面更有观赏性。同时，您也可以进行搜索，比浏览器默认的搜索功能更好。
+    details: 得益于 VitePress，这使得我们网站页面更有观赏性。同时，您也可以进行搜索，比浏览器默认的搜索功能更好。
   - icon: 🥳
     title: 社区
     details: Docs 站全面开放，欢迎各位到 Github 上提出 PR，我们将定期处理合并请求并由 Action 自动构建。 对我们的文档贡献较大的贡献者，我们将赠与 VIP 或其它内容表示感谢。
