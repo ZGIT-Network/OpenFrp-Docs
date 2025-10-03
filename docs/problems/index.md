@@ -1,5 +1,5 @@
-# 请完全查看此文档后再往交流群里提问！
 # 常见问题
+# 请完全查看此文档后再往交流群里提问！
 
 [[TOC]]
 
@@ -99,8 +99,8 @@ docker inspect （您的容器名称） | grep NetworkMode
 请优先检查 API 连接性问题:
 
 - 检查 SSL 问题 (一般不存在)
-  - Windows 系统请使用 **Edge 等现代浏览器** 访问 `https://of-dev-api.bfsea.xyz/` 查看是否出现安全警告，如果出现请安装系统更新或者手动安装根证书
-  - Linux 系统可以使用 `curl https://of-dev-api.bfsea.xyz/` 检查是否存在证书错误，如果出现证书错误可以尝试安装 (或更新) `ca-certificates` 包, 若使用 Termux 请在 `termux-chroot` 中先执行 `ln -sf tls /etc/ssl` 再尝试运行或直接使用配置文件启动
+  - Windows 系统请使用 **Edge 等现代浏览器** 访问 `https://of-dev-api.bfsea.com/` 查看是否出现安全警告，如果出现请安装系统更新或者手动安装根证书
+  - Linux 系统可以使用 `curl https://of-dev-api.bfsea.com/` 检查是否存在证书错误，如果出现证书错误可以尝试安装 (或更新) `ca-certificates` 包, 若使用 Termux 请在 `termux-chroot` 中先执行 `ln -sf tls /etc/ssl` 再尝试运行或直接使用配置文件启动
 - 检查防火墙、杀毒软件是否拦截了 FRPC 的请求
 - 检查宽带是否存在到期未续费等情况，电脑能否正常 **打开网站**（例如 Bing）
 
