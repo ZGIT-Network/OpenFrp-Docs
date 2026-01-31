@@ -42,9 +42,9 @@ server-portv6=19133
 >- 进行内网穿透时，一般只使用 `IPv4` 进行连接  
 >- 如需使用 `IPv6` 连接到基岩版服务端，请为 `IPv4` 和 `IPv6` 分别创建隧道  
 
-### Gayser(间歇泉)
+### Geyser(间歇泉)
 
-打开你的Gayser服务端配置文件 `config.yml`，一般位于你的服务端同目录  
+打开你的Geyser服务端配置文件 `config.yml`，一般位于你的服务端同目录  
 在其中找到 `port` 配置项
 
 ``` yml
@@ -59,7 +59,7 @@ bedrock:
   # This option is for the plugin version only.
 ```
 
-此配置项为Gayser服务端监听基岩版连接的本地端口，默认为 `19132`  
+此配置项为Geyser服务端监听基岩版连接的本地端口，默认为 `19132`  
 >**Java版客户端** 直连 **Java版服务端** ，您需要为 **Java版服务端** 额外配置一条隧道
 
 ## 确认你的隧道类型
@@ -67,11 +67,11 @@ bedrock:
 |隧道类型|游戏版本|默认端口|连接方式|解析方式|
 |:-------------:|:-----------:|:-----:|:-----------------:|:-----------------:|
 |[TCP](#tcp隧道)|Java         |`25565`|`example.com:25565`|SRV (可隐藏端口)    |
-|[UDP](#udp隧道)|基岩版(Gayser)|`19132`|`example.com:19132`|CNAME (不可隐藏端口)|
+|[UDP](#udp隧道)|基岩版(Geyser)|`19132`|`example.com:19132`|CNAME (不可隐藏端口)|
 
 >若您的Minecraft服务器实例与OpenFRP实例不在同一环境下，请不要忘记 **放行防火墙端口**
 
-- Gayser 服务端需要分别创建通向 **Gayser服务端** 的`UDP`隧道和通向 **Java服务端** 的`TCP`隧道  
+- Geyser 服务端需要分别创建通向 **Geyser服务端** 的`UDP`隧道和通向 **Java服务端** 的`TCP`隧道  
 - Minecraft 基岩版服务端 **不支持** 使用 **SRV解析** 隐藏访问端口  
 - Minecraft Java版服务端一般使用 `TCP` 连接与客户端通信。如您安装了其他Mod，请以Mod文档为准  
 
@@ -97,7 +97,7 @@ bedrock:
 ![](./image/of1.png)
 
 选择任意节点，在左上角的隧道类型选择 `UDP`  
-如图所示，填入你的服务端 **IP地址** 和 `server-port` 配置项 **或** Gayser配置项 `port` 中的 **端口**
+如图所示，填入你的服务端 **IP地址** 和 `server-port` 配置项 **或** Geyser配置项 `port` 中的 **端口**
 
 ![](./image/mc3.png)
 
