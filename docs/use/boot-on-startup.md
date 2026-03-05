@@ -6,6 +6,7 @@
 
 ::: tip
 推荐使用Debian系统，始终不推荐使用CentOS系统，**!不支持 Termux 及其相关的程序!**
+因为安全原因 这里不使用root特权用户
 :::
 
 
@@ -18,6 +19,29 @@
 ```bash 
 chmod +x ./frpc_linux_amd64
 ```
+把它移动到某个目录
+```bash
+mv ./frpc_linux_amd64 /path/to/you/dir/
+```
+创建 frpc 组
+```bash
+sudo groupadd --system frpc
+```
+
+创建 frpc 用户，属于 frpc 组
+```bash
+sudo useradd --system -s /sbin/nologin -g frpc frpc
+```
+调整权限
+```bash
+sudo chown root:frpc /path/to/your/dir/frpc_linux_amd64
+sudo chmod 750 /path/to/your/dir/frpc_linux_amd64
+
+sudo chown -R frpc:frpc /path/to/your/dir
+sudo chmod -R 750 /path/to/your/dir
+    
+```    
+
 
 2. 复制下面的`systemd unit服务文件内容`到你的文本编辑器
 
@@ -27,7 +51,8 @@ Description=OpenFrp Frpc Daemon
 After=network.target
 
 [Service]
-User=root
+User=frpc      
+Group=frpc                                                          
 Restart=on-failure
 RestartSec=5s
 WorkingDirectory=/path/to/your/dir
@@ -36,6 +61,7 @@ LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
+
 ```
 
 3. 将工作目录和二进制可执行文件的 `绝对路径` 替换为你的实际路径
