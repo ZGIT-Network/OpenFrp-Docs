@@ -23,7 +23,7 @@
 | i/o deadline reached | I/O繁忙 | 节点可能过载，建议换一个节点 |
 | router config conflict | *URL 路由冲突* | [点此查看详细说明](#url-路由冲突) |
 | Request failed: `XXX` `YYY` | *API 请求失败* | [点此查看详细说明](#api-请求失败) |
-| reconnect to server error: dial tcp 'XXX ': connect: connection refused |重连失败：服务器拒绝连接|可能是你选择的节点正在遭受攻击。[请查看节点状态](https://kuma.openfrp.net/)，等待恢复或换一个节点。|
+| reconnect to server error: dial tcp 'XXX ': connect: connection refused |重连失败：服务器拒绝连接|可能是你选择的节点正在遭受攻击。[请查看节点状态](https://frptz.com/status/of)，等待恢复或换一个节点。|
 | Get "xxx": tls: failed to verify certificate: x509: certificate signed by unknown authority | 证书验证失败 | [点此查看详细说明](#api-请求失败) |
 
 ### 登录节点失败, 请检查网络连接
@@ -36,7 +36,7 @@
    # 例如
    tcping cn-shanghai.openfrp.top
    ```
-1. 请查看 [节点状态](https://kuma.openfrp.net/) 页面对应节点是否在线
+1. 请查看 [节点状态](https://frptz.com/status/of) 页面对应节点是否在线
 
 | 节点在线 | TCPING 测试 | 可能原因                                   | 解决方案          |
 | :------: | :-------: | ------------------------------------------ | ----------------- |
@@ -104,7 +104,7 @@ docker inspect （您的容器名称） | grep NetworkMode
 - 检查防火墙、杀毒软件是否拦截了 FRPC 的请求
 - 检查宽带是否存在到期未续费等情况，电脑能否正常 **打开网站**（例如 Bing）
 
-如果还是没有什么头绪，可以查看 [外部状态监控](https://kuma.openfrp.net/) 中 API 是否正常在线 (<span style="color: #3bd671">**Online**</span>)，如果不在线请联系管理员。
+如果还是没有什么头绪，可以查看 [外部状态监控](https://frptz.com/status/of) 中 API 是否正常在线 (<span style="color: #3bd671">**Online**</span>)，如果不在线请联系管理员。
 
 
 
@@ -115,7 +115,7 @@ docker inspect （您的容器名称） | grep NetworkMode
 
 # 确保已经**在官方网站下**安装**最新**的启动器 
 
-1.查看[外部状态监控](https://kuma.openfrp.net/) API是否在线，不在线请等待维护完成，在线请看下面
+1.查看[外部状态监控](https://frptz.com/status/of) API是否在线，不在线请等待维护完成，在线请看下面
 
 2.**查看错误报告**，并将其发送至OF交流群，寻求帮助
 
@@ -214,7 +214,7 @@ OpenFrp支持 FRP 官方最新版本以及其他的 FRP 发行版本，您可以
 - 更换设备访问 (如手机更换为电脑)
 - 更换网络环境访问 (如 WiFi 更换为 4G、5G 网络)
 - 更换现代浏览器访问 (推荐使用 Google Chrome / Microsoft Edge / Firefox)
-- 查看[状态监控](https://kuma.openfrp.net/)页面中 #0 OpenFrp - 主站 是否正常
+- 查看[状态监控](https://frptz.com/status/of)页面中 #0 OpenFrp - 主站 是否正常
 - 查看在 OpenFrp 用户交流群 中是否有故障通知
 
 ### 增值服务相关
